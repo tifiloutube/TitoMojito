@@ -1,0 +1,102 @@
+:root {
+    --color-primary: #2B2B2B;
+    --color-secondary: #F9F6ED;
+    --tertiary-color: #7ED956;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    font-family: "Lexend Tera", sans-serif;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.button {
+    border-radius: 10px;
+    background: var(--tertiary-color);
+    padding: 15px 40px;
+    color: var(--color-primary);
+    text-align: center;
+    font-family: "Lexend Tera", sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    border: none;
+}
+
+.h1HomePage {
+    color: var(--color-secondary);
+    text-align: center;
+    text-shadow: 0px 4px 50px var(--tertiary-color);
+    font-family: "Mr Dafoe", sans-serif;
+    font-size: 90px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+}
+
+.h1 {
+    color: var(--color-secondary);
+    font-family: "Lexend Tera", sans-serif;
+    font-size: 75px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.h2 {
+    color: var(--color-primary);
+    font-family: "Lexend Tera", sans-serif;
+    font-size: 55px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.h3 {
+    color: var(--color-primary);
+    font-family: "Lexend Tera", sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.h4 {
+    color: var(--color-primary);
+    font-family: "Lexend Tera", sans-serif;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.smallText {
+    color: var(--color-primary);
+    font-family: "Lexend Tera", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
