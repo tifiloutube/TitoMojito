@@ -45,7 +45,7 @@ onMounted(() => {
         <h1 class="h1HomePage title">Welcome to <br>
           <span class="titleLine">Tito <span class="titleWorld">Mojito</span></span>
         </h1>
-        <img src="../../public/images/backgroundPlanhce.png" alt="image de fond : L'image représente une planche en bois." class="imageTitle">
+        <img src="../../public/images/backgrounds/backgroundPlanhce.png" alt="image de fond : L'image représente une planche en bois." class="imageTitle">
         <div class="floating-container">
           <img src="../../public/images/floatImage/glaçon.png" alt="" class="floating-element floating-element-anim">
           <img src="../../public/images/floatImage/glaçon.png" alt="" class="floating-element floating-element-anim">

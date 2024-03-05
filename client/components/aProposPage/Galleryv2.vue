@@ -1,9 +1,6 @@
 <script setup lang="js">
-import { ref, onMounted, nextTick, onUnmounted } from 'vue';
-import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
+import { ref, onMounted, nextTick } from 'vue';
+import { gsap } from 'gsap';
 
 const galleryPhotos = ref([]);
 const clipPathValue = ref('inset(0px round 0px)');
@@ -15,9 +12,44 @@ async function fetchGalleryData() {
     const data = await response.json();
     galleryPhotos.value = data.acf_fields.galerie_photo;
     await nextTick();
+    setImagesVisibility('hidden');
   } catch (error) {
     console.error('Erreur lors de la récupération des données de la galerie:', error);
   }
+}
+
+function setImagesVisibility(visibility) {
+  const images = document.querySelectorAll('.gallery-item_image');
+  images.forEach(img => {
+    img.style.visibility = visibility;
+  });
+}
+
+function animateImages() {
+  const gallery = document.querySelector('.gallery');
+  const images = document.querySelectorAll('.gallery-item_image');
+
+  gsap.set(images, {
+    x: () => gallery.offsetWidth / 2 - images[0].offsetWidth / 2,
+    y: () => gallery.offsetHeight / 2 - images[0].offsetHeight / 2,
+    scale: 0.5,
+  });
+
+  images.forEach((img, index) => {
+    gsap.fromTo(img, {
+      visibility: "hidden",
+    }, {
+      visibility: "visible",
+      x: 0,
+      y: 0,
+      scale: 1,
+      delay: index * 0.2,
+      ease: "power3.out",
+      onStart: function() {
+        img.style.visibility = "visible";
+      },
+    });
+  });
 }
 
 function handleScroll() {
@@ -49,6 +81,7 @@ function setupIntersectionObserver() {
   observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
+        animateImages();
         observer.unobserve(entry.target);
       }
     });
@@ -58,42 +91,11 @@ function setupIntersectionObserver() {
   if (galleryElement) observer.observe(galleryElement);
 }
 
-function animateGalleryImages() {
-  const items = gsap.utils.toArray('.gallery-item');
-  let delay = 0; // Initialiser le délai cumulatif
-
-  items.forEach((item, index) => {
-    gsap.fromTo(item,
-        {
-          autoAlpha: 0,
-          y: 100,
-        },
-        {
-          autoAlpha: 1,
-          y: 0,
-          duration: 0.5,
-          scrollTrigger: {
-            trigger: item,
-            start: "top 60%", // Déclenchement initial quand l'élément entre dans le viewport
-            toggleActions: "play none none reverse",
-            onLeaveBack: ({reset}) => reset(), // Optionnel: Réinitialise l'animation quand l'élément quitte le viewport par le haut
-          },
-          delay: () => {
-            const delayToUse = delay;
-            delay += 0.2; // Augmenter le délai pour l'élément suivant
-            return delayToUse;
-          },
-        }
-    );
-  });
-}
-
 onMounted(async () => {
   window.addEventListener('scroll', handleScroll);
   await fetchGalleryData();
   await nextTick();
   setupIntersectionObserver();
-  animateGalleryImages(); // Initialise les animations après le chargement des données
 });
 
 onUnmounted(() => {
@@ -104,14 +106,13 @@ onUnmounted(() => {
 });
 </script>
 
-
 <template>
   <section class="container" :style="{ clipPath: clipPathValue }">
     <article class="wrapper">
       <h2 class="h2">La galerie</h2>
-      <div class="gallery">
+      <div class="gallery" ref="gallery">
         <div v-for="photo in galleryPhotos" :key="photo.id" class="gallery-item">
-          <img :src="photo.url" :alt="photo.alt" ref="images"/>
+          <img :src="photo.url" :alt="photo.alt" ref="images" class="gallery-item_image"/>
         </div>
       </div>
     </article>
@@ -136,7 +137,7 @@ onUnmounted(() => {
   grid-template-columns: repeat(3, 1fr);
   overflow: hidden;
 }
-.gallery-item img {
+.gallery-item_image {
   display: flex;
   margin: auto;
   width: 436.193px;

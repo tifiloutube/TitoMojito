@@ -36,7 +36,7 @@ onUnmounted(() => {
 <template>
   <section class="container" :style="{ clipPath: clipPathValue }">
     <article class="containerImage">
-      <img src="../../public/images/backgroundContact.jpeg" alt="" class="background">
+      <img src="../../public/images/backgrounds/backgroundContact.jpeg" alt="" class="background">
       <div class="contact">
         <h2 class="h2">UNE ENVIE ? CONTACTEZ-NOUS</h2>
         <button class="button">Contactez-nous</button>

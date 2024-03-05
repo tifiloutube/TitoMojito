@@ -36,7 +36,7 @@ onMounted(
   <section class="wrapper">
     <h2 class="h2">La saveur du mois</h2>
     <div v-if="mojitoDuMois" class="mojitoDuMois">
-      <img src="../../public/images/mojitoDuMois.png" alt="" class="imageMojitoDuMois" :style="dynamicStyles">
+      <img src="../../public/images/backgrounds/mojitoDuMois.png" alt="" class="imageMojitoDuMois" :style="dynamicStyles">
       <h3 class="titreMojitoDuMois" :style="{ ...dynamicStyles }">{{ mojitoDuMois.saveur_du_mojito }}</h3>
     </div>
   </section>

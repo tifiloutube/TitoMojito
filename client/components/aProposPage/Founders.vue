@@ -30,12 +30,16 @@ onMounted(
     <h2 class="h2">Les créateurs</h2>
     <div class="container">
       <ul class="cards">
-        <li v-for="(founder, index) in founders" :key="founder.nom" class="card" :style="{ paddingTop: (index * 60) + 'px' }">
+        <li v-for="(founder, index) in founders" :key="founder.nom" class="card" :style="{ paddingTop: (index * 80) + 'px' }">
           <div class="card-body">
-            <h4 class="h4">{{ founder.nom }}</h4>
-            <p>{{ founder.description }}</p>
-            <h4 class="h4">{{ founder.poste }}</h4>
-            <img :src="founder.photo_du_membre.url" :alt="`Photo de ${founder.nom}`">
+            <div class="founder" :style="{height: 'calc(80vh - ' + (index * 80) + 'px)'}">
+              <div class="founder-info">
+                <h4 class="h4">{{ founder.nom }}</h4>
+                <p>{{ founder.description }}</p>
+                <h4 class="h4">{{ founder.poste }}</h4>
+              </div>
+              <img :src="founder.photo_du_membre.url" :alt="`Photo de ${founder.nom}`">
+            </div>
           </div>
         </li>
       </ul>
@@ -46,11 +50,6 @@ onMounted(
 
 
 <style scoped>
-li {
-  list-style: none;
-  position: sticky;
-  top: 0;
-}
 .wrapper {
   margin-top: 30px;
 }
@@ -60,6 +59,11 @@ li {
 .container {
   grid-column: 1 / 13;
 }
+.card {
+  list-style: none;
+  position: sticky;
+  top: 0;
+}
 .card-body {
   border-top: 1px solid #2B2B2B;
   padding-top: 30px;
@@ -68,16 +72,28 @@ li {
 }
 .cards {
   display: grid;
-  grid-template-rows: repeat(3, 100vh);
 }
 
+.founder {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
 
-
+.founder-info {
+  grid-column: 1/8;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  p {
+    max-width: 450px;
+  }
+}
 
 img {
   width: 360px;
   height: 500px;
   border-radius: 20px;
   object-fit: cover;
+  grid-column: 9/13;
 }
 </style>
