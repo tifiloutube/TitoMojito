@@ -12,10 +12,10 @@
     <span></span>
     <div class="wrapper">
       <ul class="menu">
-        <li>Acceuil</li>
-        <li>Le bar</li>
-        <li>L'équipe</li>
-        <li>La carte</li>
+        <li><NuxtLink to="/" style="text-decoration: none; color: #2B2B2B;">Accueil</NuxtLink></li>
+        <li><NuxtLink to="/le-bar" style="text-decoration: none; color: #2B2B2B;">Le bar</NuxtLink></li>
+        <li><NuxtLink to="/equipe" style="text-decoration: none; color: #2B2B2B;">L'équipe</NuxtLink></li>
+        <li><NuxtLink to="/carte" style="text-decoration: none; color: #2B2B2B;">La carte</NuxtLink></li>
       </ul>
       <ul class="socialNetwork">
         <li>Instagram</li>
@@ -106,5 +106,10 @@ li {
   font-style: normal;
   font-weight: 300;
   line-height: normal;
+}
+
+NuxtLink {
+  text-decoration: none;
+  color: #2B2B2B;
 }
 </style>

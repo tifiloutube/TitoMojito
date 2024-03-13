@@ -146,6 +146,10 @@ onMounted(() => {
           <p>@titomojito.toulouse</p>
         </li>
         <li class="socialNetwork-logo">
+          <img src="../../public/images/tiktok.svg" alt="logo TikTok">
+          <p>titomojito.toulouse</p>
+        </li>
+        <li class="socialNetwork-logo">
           <img src="../../public/images/facebook%201.svg" alt="logo Facebook">
           <p>TitoMojito Toulouse</p>
         </li>
@@ -185,8 +189,16 @@ onMounted(() => {
 </template>
 
 <style scoped>
+.h3 {
+  color: #2B2B2B;
+  font-family: "Mr Dafoe", sans-serif;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
 .wrapper {
-  margin-top: 140px;
+  margin-top: 80px;
 }
 .socialNetwork {
   margin-top: 45px;

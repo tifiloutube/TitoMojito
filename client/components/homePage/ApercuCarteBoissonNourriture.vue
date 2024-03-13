@@ -1,111 +1,76 @@
 <script setup lang="ts">
-
+const cartes = [
+  { type: 'nourriture', nom: 'On grignote quoi ?', image: '/images/carte/carteNourriture.png', route: '/carte/nourriture' },
+  { type: 'boissons', nom: 'On mijote quoi ?', image: '/images/carte/carteBoissons.png', route: '/carte/boissons' },
+];
 </script>
 
 <template>
   <section class="wrapper">
-    <h2 class="h2">
-      Notre carte
-    </h2>
-    <div class="carte">
-      <div class="image-wrapper">
-        <img src="../../public/images/carte/carteBoissons.png">
-        <div class="hover-text">On mijote quoi ?</div>
-      </div>
-      <div class="image-wrapper">
-        <img src="../../public/images/carte/carteNourriture.png">
-        <div class="hover-text">On grignote quoi ?</div>
-      </div>
-    </div>
+    <h3 class="h3">Notre carte</h3>
+    <article class="container" v-for="carte in cartes" :key="carte.type">
+      <NuxtLink :to="carte.route" style="position: relative; width: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+        <img :src="carte.image" :alt="`image carte ${carte.type}`">
+        <div class="container-name">
+          <h3 class="h3">{{ carte.nom }}</h3>
+        </div>
+      </NuxtLink>
+    </article>
   </section>
 </template>
 
 <style scoped>
 .wrapper {
-  margin-top: 140px;
+  margin-bottom: 140px;
 }
-.h2 {
-  grid-column-start: 1;
-  grid-column-end: 13;
+.wrapper .container:nth-child(2) {
+  grid-column: 1/7;
 }
-.carte {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 25px;
-  grid-column-start: 1;
-  grid-column-end: 13;
+.wrapper .container:nth-child(3) {
+  grid-column: 7/13;
 }
-
-.carte .image-wrapper:nth-child(1) {
-  position: relative;
-  grid-column-start: 1;
-  grid-column-end: 7;
-  width: 100%;
-  height: 450px;
-  border-radius: 20px;
-  overflow: hidden;
-}
-
-.carte .image-wrapper:nth-child(2) {
-  position: relative;
-  grid-column-start: 7;
-  grid-column-end: 13;
-  width: 100%;
-  height: 450px;
-  border-radius: 20px;
-  overflow: hidden;
-}
-
-
-.image-wrapper .hover-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 24px;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-
-.carte img:nth-child(1) {
-  object-fit: cover;
-  border-radius: 20px;
-  grid-column-start: 1;
-  grid-column-end: 7;
-  width: 100%;
-  height: 450px;
-  transition: filter 0.5s ease;
-}
-
-.carte img:nth-child(2) {
-  object-fit: cover;
-  border-radius: 20px;
-  grid-column-start: 7;
-  grid-column-end: 13;
-  width: 100%;
-  height: 450px;
-  transition: filter 0.3s ease;
-}
-.carte img:nth-child(1):hover {
-  filter: blur(10px);
-}
-
-.carte img:nth-child(2):hover {
-  filter: blur(10px);
-}
-
-.carte .image-wrapper:hover .hover-text {
-  visibility: visible;
-  opacity: 1;
-  color: #F1ECE8;
-  font-family: "Lexend Tera", sans-serif;
-  font-size: 35px;
+.h3 {
+  grid-column: 1/13;
+  text-align: center;
+  color: #2B2B2B;
+  font-family: "Mr Dafoe", sans-serif;
+  font-size: 120px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+.container-name {
+  position: absolute;
+  border-radius: 8px;
+  background: #7ED956;
+  padding: 5px 20px 5px 20px;
+  min-width: 255px;
+  transition: box-shadow 0.3s, transform 0.3s;
+  .h3 {
+    color: #2B2B2B;
+    text-align: center;
+    font-family: "Mr Dafoe", sans-serif;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+img {
   width: 100%;
-  text-align: center;
+  height: 500px;
+  border-radius: 20px;
+  object-fit: cover;
+  transition: filter 0.3s;
+  filter: blur(5px);
+}
+
+.container:hover img {
+  filter: blur(0px);
+}
+
+.container:hover .container-name {
+  box-shadow: 5px 4px 0px 0px #2B2B2B;
+  transform: translate(-4px, -4px);
 }
 </style>

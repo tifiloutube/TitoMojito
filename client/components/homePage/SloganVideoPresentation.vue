@@ -23,6 +23,12 @@
 }
 .h2 {
   text-align: center;
+  color: #2B2B2B;
+  font-family: "Mr Dafoe", sans-serif;
+  font-size: 100px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 article {
   position: relative;

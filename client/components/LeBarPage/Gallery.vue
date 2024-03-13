@@ -20,13 +20,23 @@ async function fetchGalleryData() {
   }
 }
 
+function calculateScrollValue(percentage) {
+  const maxScrollValue = document.body.scrollHeight - window.innerHeight;
+  return (percentage / 100) * maxScrollValue;
+}
+
 function handleScroll() {
   const scrollPosition = window.scrollY;
-  const startScroll = 4500;
-  const endScroll = 5000;
+
+  const startPercentage = 94;
+  const endPercentage = 100;
+
+  const startScroll = calculateScrollValue(startPercentage);
+  const endScroll = calculateScrollValue(endPercentage);
 
   if (scrollPosition >= startScroll && scrollPosition <= endScroll) {
     const progressRatio = (scrollPosition - startScroll) / (endScroll - startScroll);
+
     const insetTop = 25 * progressRatio;
     const insetBottom = 200 * progressRatio;
     const insetSides = 25 * progressRatio;
@@ -74,13 +84,12 @@ function animateGalleryImages() {
           duration: 0.5,
           scrollTrigger: {
             trigger: item,
-            start: "top 60%", // Déclenchement initial quand l'élément entre dans le viewport
+            start: "top 60%",
             toggleActions: "play none none reverse",
-            onLeaveBack: ({reset}) => reset(), // Optionnel: Réinitialise l'animation quand l'élément quitte le viewport par le haut
           },
           delay: () => {
             const delayToUse = delay;
-            delay += 0.2; // Augmenter le délai pour l'élément suivant
+            delay += 0.2;
             return delayToUse;
           },
         }
@@ -108,7 +117,7 @@ onUnmounted(() => {
 <template>
   <section class="container" :style="{ clipPath: clipPathValue }">
     <article class="wrapper">
-      <h2 class="h2">La galerie</h2>
+      <h2 class="h2">Le mur des photos</h2>
       <div class="gallery">
         <div v-for="photo in galleryPhotos" :key="photo.id" class="gallery-item">
           <img :src="photo.url" :alt="photo.alt" ref="images"/>
@@ -129,6 +138,11 @@ onUnmounted(() => {
 .h2 {
   grid-column: 1/13;
   color: #F9F6ED;
+  font-family: "Mr Dafoe", sans-serif;
+  font-size: 120px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 .gallery {
   display: grid;

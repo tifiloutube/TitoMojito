@@ -44,67 +44,20 @@ onUnmounted(() => {
 
 <template>
   <section class="container" :style="{ clipPath: clipPathValue }">
-    <article class="containerImage">
-      <img src="../../public/images/backgrounds/backgroundContact.jpeg" alt="" class="background">
-      <div class="contact">
-        <h2 class="h2">UNE ENVIE ? CONTACTEZ-NOUS</h2>
-        <button class="button">Contactez-nous</button>
-      </div>
-    </article>
     <article class="containerEnd">
-      <h2 class="h2">NOUS VOUS MOJITONS UNE SURPRISE ! <br>
-        UN PEU DE PATIENCE</h2>
+      <h2 class="h2">ENVIE DE NOUS REJOINDRE ?</h2>
+      <a href="mailto:info@titomojito.fr?subject=Candidature">Candidatez</a>
     </article>
   </section>
 </template>
 
 <style scoped>
 .container {
-  margin-top: 140px;
   display: grid;
-}
-
-.containerImage {
-  display: grid;
-  grid-column-start: 1;
-  grid-column-end: 13;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-}
-
-.background {
-  width: 100vw;
-  object-fit: cover;
-  border-radius: 20px 20px 0px 0px;
-  filter: blur(7.5px);
-  max-height: 555px;
-}
-
-.contact {
-  position: absolute;
-  text-align: center;
-  width: 100%;
 }
 
 .h2 {
   color: #F1ECE8;
-}
-
-.button {
-  margin-top: 20px;
-  padding: 22px 0px 22px 0px;
-  width: 237px;
-  border-radius: 8px;
-  background: #7ED956;
-  border: none;
-  color: #2B2B2B;
-  text-align: center;
-  font-family: "Lexend Tera", sans-serif;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: normal;
 }
 
 .containerEnd {
@@ -114,9 +67,15 @@ onUnmounted(() => {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  gap: 20px;
   .h2 {
     color: #2B2B2B;
     text-align: center;
   }
+  a {
+    color:  #2B2B2B;
+    text-decoration: underline #2B2B2B;
+  }
 }
-</style>
+</style>z

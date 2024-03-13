@@ -7,7 +7,7 @@
     <article class="container">
       <div class="containerTitle">
         <img src="../../public/images/backgrounds/backgroundAbout.jpeg" alt="" class="backgroundImage">
-        <h1 class="h1">À PROPOS</h1>
+        <h1 class="h1">LE BAR</h1>
       </div>
       <aside>
         <div class="info">
@@ -28,10 +28,15 @@
 </template>
 
 <style scoped>
+.h1 {
+  font-family: "Mr Dafoe", sans-serif;
+  font-size: 150px;
+  letter-spacing: 0.08em;
+  text-shadow: 0px 4px 50px var(--tertiary-color);
+}
 .container {
   background-color: #7ED956;
   border-radius: 20px;
-  height: 100vh;
 }
 .containerTitle {
   position: relative;
@@ -42,7 +47,7 @@
 }
 .backgroundImage {
   width: 100%;
-  height: 70vh;
+  height: 100vh;
   object-fit: cover;
   border-radius: 20px;
   filter: blur(7.5px);

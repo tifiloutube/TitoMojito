@@ -5,7 +5,7 @@
 <template>
   <section class="wrapper">
     <article class="container-image">
-      <img src="../../public/images/UI/founders.jpg">
+      <img src="../../public/images/UI/fondateur.jpeg">
     </article>
     <article class="container-concept">
       <h2 class="h2">Le concept</h2>
@@ -27,6 +27,14 @@
 <style scoped>
   .wrapper {
     margin-top: 80px;
+  }
+  .h2 {
+    color: #2B2B2B;
+    font-family: "Mr Dafoe", sans-serif;
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
   }
   .container-image {
     grid-column: 1/5;

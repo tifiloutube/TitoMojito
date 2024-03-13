@@ -55,6 +55,12 @@ onMounted(
 }
 .h2 {
   grid-column: 1 / 13;
+  color: #2B2B2B;
+  font-family: "Mr Dafoe", sans-serif;
+  font-size: 120px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 .container {
   grid-column: 1 / 13;
@@ -94,6 +100,6 @@ img {
   height: 500px;
   border-radius: 20px;
   object-fit: cover;
-  grid-column: 9/13;
+  grid-column: 10/13;
 }
 </style>

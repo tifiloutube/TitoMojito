@@ -33,54 +33,106 @@ onMounted(
 </script>
 
 <template>
-  <section class="wrapper">
-    <h2 class="h2">La saveur du mois</h2>
-    <div v-if="mojitoDuMois" class="mojitoDuMois">
-      <img src="../../public/images/backgrounds/mojitoDuMois.png" alt="" class="imageMojitoDuMois" :style="dynamicStyles">
-      <h3 class="titreMojitoDuMois" :style="{ ...dynamicStyles }">{{ mojitoDuMois.saveur_du_mojito }}</h3>
-    </div>
+  <section class="container">
+    <h2 class="h2">Les saveurs du mois</h2>
+    <article class="mojitoDuMois">
+      <div class="saveur1">
+        <h2 class="saveur">MANGUE</h2>
+        <img src="../../public/images/orange-cocktail-with-ice-table-removebg-preview.png">
+        <h3 class="localisation">TitoMojito Jeanne D'arc</h3>
+      </div>
+      <div class="saveur2">
+        <h2 class="saveur-titre">ANANAS</h2>
+        <img src="../../public/images/orange-cocktail-with-ice-table-removebg-preview.png">
+        <h3 class="localisation">TitoMojito Jean Jaurès</h3>
+      </div>
+    </article>
   </section>
 </template>
 
 <style scoped>
-.wrapper {
-  margin-top: 143px;
+.container {
+  margin-top: 80px;
   gap: 60px;
-  height: 100vh;
 }
 
 .h2 {
-  grid-column-start: 1;
-  grid-column-end: 13;
-}
-
-.mojitoDuMois {
-  display: flex;
-  grid-column-start: 1;
-  grid-column-end: 13;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  height: 80vh;
-}
-
-.imageMojitoDuMois {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: blur(5px);
-  border-radius: 20px;
-}
-
-.titreMojitoDuMois {
-  position: absolute;
-  color: #F1ECE8;
   text-align: center;
+  margin-bottom: 45px;
+  margin-left: 50px;
+  color: #2B2B2B;
   font-family: "Mr Dafoe", sans-serif;
-  font-size: 150px;
+  font-size: 120px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  box-shadow: none !important;
+}
+
+.mojitoDuMois {
+  .saveur1 {
+    border-radius: 20px 20px 0px 0px;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(180deg, #F9F6ED 0%, #954F00 33%, #954F00 100%);
+  }
+  .saveur2 {
+    border-radius: 20px 20px 0px 0px;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(180deg, #F9F6ED 0%, #ffcb00 33%, #ffcb00 100%);
+  }
+}
+.saveur {
+  letter-spacing: -0.08em;
+  color: transparent;
+  text-align: center;
+  font-family: "Lexend Tera", sans-serif;
+  font-size: 180px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  background-image: url("https://images.unsplash.com/photo-1605027990121-cbae9e0642df?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: center;
+  background-clip: text;
+  --webkit-background-clip: text;
+  margin-bottom: -180px;
+}
+.saveur-titre {
+  letter-spacing: -0.08em;
+  color: transparent;
+  text-align: center;
+  font-family: "Lexend Tera", sans-serif;
+  font-size: 180px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  background-image: url("https://images.unsplash.com/photo-1550828484-55f0abc43e03?q=80&w=1633&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: center;
+  background-clip: text;
+  --webkit-background-clip: text;
+  margin-bottom: -180px;
+}
+.localisation {
+  color: #FFF;
+  text-align: center;
+  font-family: "Lexend Tera", sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 </style>e
