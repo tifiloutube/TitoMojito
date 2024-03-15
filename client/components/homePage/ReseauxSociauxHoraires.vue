@@ -23,7 +23,6 @@ async function fetchData() {
   }
 }
 
-// Fonction pour initialiser les animations GSAP
 function initHoverAnimation() {
   nextTick(() => {
     const adresses = document.querySelectorAll('.adresse');
@@ -32,10 +31,8 @@ function initHoverAnimation() {
       adresse.addEventListener('mouseenter', function(e) {
         const image = adresse.querySelector('.imageHover');
 
-        // Appelle showImage pour animer l'apparition de l'image
         showImage(image);
 
-        // Fonction pour déplacer l'image avec le curseur
         function moveImageWithCursor(e) {
           gsap.to(image, {
             left: e.clientX + 10 + "px",

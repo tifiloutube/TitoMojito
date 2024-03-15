@@ -28,7 +28,7 @@ onMounted(() => {
     }
   })
   gsap.to(".floating-element-anim", {
-    yPercent: -30,
+    yPercent: -40,
     ease: "power1.inOut",
     scrollTrigger: {
       trigger: ".floating-container",

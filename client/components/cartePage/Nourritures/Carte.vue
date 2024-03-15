@@ -1,5 +1,6 @@
-<script setup lang="ts">
-import { onMounted, ref, reactive } from 'vue';
+<script setup lang="js">
+import { onMounted, ref, reactive, nextTick } from 'vue';
+import { gsap } from 'gsap';
 
 const carteNourriture = ref([]);
 const openStates = reactive({});
@@ -28,7 +29,46 @@ function toggle(index) {
   openStates[index] = !openStates[index];
 }
 
-onMounted(loadCarteNourriture);
+function initHoverAnimation() {
+  nextTick(() => {
+    const listItems = document.querySelectorAll('.list-nourritures_nom_prix');
+
+    listItems.forEach(item => {
+      item.addEventListener('mouseenter', function(e) {
+        const image = item.querySelector('.imageHover');
+
+        gsap.to(image, { autoAlpha: 1, duration: 0.3 });
+
+        function moveImage(e) {
+          const rect = item.getBoundingClientRect();
+
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+
+          const newX = x + 10;
+          const newY = y -170;
+
+          gsap.set(image, {
+            x: newX,
+            y: newY,
+            position: 'absolute'
+          });
+        }
+
+        item.addEventListener('mousemove', moveImage);
+
+        item.addEventListener('mouseleave', () => {
+          gsap.to(image, { autoAlpha: 0, duration: 0.3 });
+          item.removeEventListener('mousemove', moveImage);
+        });
+      });
+    });
+  });
+}
+
+onMounted(() => {
+  loadCarteNourriture().then(initHoverAnimation);
+});
 </script>
 
 <template>
@@ -51,6 +91,7 @@ onMounted(loadCarteNourriture);
           <div>
             <ol>{{ nourriture.nom_de_la_nourriture }}</ol>
             <ol class="composition">{{ nourriture.composition_de_la_nourriture }}</ol>
+            <img :src="nourriture.photo_de_la_nourriture.url" alt="Photo de la nourriture" class="imageHover"/>
           </div>
           <ol>{{ nourriture.prix_de_la_nourriture }}</ol>
         </li>
@@ -80,8 +121,23 @@ li {
       justify-content: space-between;
     }
     .list-nourritures_nom_prix {
+      position: relative;
       ol {
         font-size: 17px;
+      }
+      .imageHover {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+        object-fit: cover;
+        border-radius: 8px;
+        width: 320px;
+        height: 180px;
+        z-index: 1000;
       }
     }
   }
