@@ -44,7 +44,7 @@ onMounted(
   <section class="container">
     <h2 class="h2">Les saveurs du mois</h2>
     <article class="mojitoDuMois">
-      <div v-for="(mojito, index) in mojitosDuMois" :key="index" :class="`saveur${index + 1}`" :style="{ backgroundImage: `url(${mojito.imageBackground})`, background: `linear-gradient(180deg, #F9F6ED 0%, ${mojito.couleurGradient} 33%, ${mojito.couleurGradient} 100%)` }">
+      <div v-for="(mojito, index) in mojitosDuMois" :key="index" class="saveurMojito" :style="{ backgroundImage: `url(${mojito.imageBackground})`, background: `linear-gradient(180deg, #F9F6ED 0%, ${mojito.couleurGradient} 33%, ${mojito.couleurGradient} 100%)` }">
         <h2 class="saveur" :style="{ backgroundImage: `url(${mojito.imageBackground})` }">{{ mojito.saveur }}</h2>
         <img :src="mojito.imageMojito" alt="Image de Mojito">
         <h3 class="localisation">{{ mojito.lieu }}</h3>
@@ -72,18 +72,7 @@ onMounted(
 }
 
 .mojitoDuMois {
-  .saveur1 {
-    border-radius: 20px 20px 0px 0px;
-    position: sticky;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
-  }
-  .saveur2 {
+  .saveurMojito {
     border-radius: 20px 20px 0px 0px;
     position: sticky;
     top: 0;
@@ -105,22 +94,6 @@ onMounted(
   font-weight: 700;
   line-height: normal;
   background-image: url("https://images.unsplash.com/photo-1605027990121-cbae9e0642df?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); /* imageBackground */
-  background-size: cover;
-  background-position: center;
-  background-clip: text;
-  --webkit-background-clip: text;
-  margin-bottom: -180px;
-}
-.saveur-titre {
-  letter-spacing: -0.08em;
-  color: transparent;
-  text-align: center;
-  font-family: "Lexend Tera", sans-serif;
-  font-size: 180px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  background-image: url("https://images.unsplash.com/photo-1550828484-55f0abc43e03?q=80&w=1633&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); /* imageBackground */
   background-size: cover;
   background-position: center;
   background-clip: text;
