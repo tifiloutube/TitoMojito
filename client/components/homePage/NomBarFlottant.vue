@@ -56,16 +56,16 @@ onMounted(() => {
             <path d="M1324.1 289.748C1331.56 291.484 1341.92 288.749 1355.18 281.501C1368.41 274.209 1375.68 268.741 1376.96 265.095C1374.75 262.035 1372.75 257.065 1370.97 250.164C1369.24 243.285 1368.28 239.813 1368.11 239.748C1359.3 244.848 1351.1 251.184 1343.46 258.758C1331.06 271.605 1324.21 280.872 1322.88 286.536C1322.47 288.402 1322.88 289.466 1324.1 289.748ZM1419.58 221.519C1417.26 220.998 1411.6 223.493 1402.57 228.984C1393.54 234.496 1388.7 238.663 1388.07 241.484C1387.9 242.178 1388.25 243.741 1389.12 246.171C1390.03 248.602 1390.85 249.904 1391.55 250.078C1395.47 250.946 1401.05 247.191 1408.3 238.793C1415.59 230.351 1419.41 225.403 1419.76 223.949C1420.11 222.452 1420.04 221.649 1419.58 221.519ZM1409.78 266.831C1416.31 268.35 1427.44 266.723 1443.2 261.97C1458.93 257.239 1472.97 252.117 1485.3 246.605L1503.87 238.012C1505.61 240.095 1506.17 242.33 1505.61 244.696C1505.09 247.018 1503.57 248.862 1501.1 250.251C1454.33 277.117 1421.02 288.25 1401.18 283.671C1399.79 283.324 1397.73 282.586 1395.02 281.414C1361.51 305.894 1335.32 315.963 1316.46 311.623C1304.24 306.805 1297.34 300.512 1295.71 292.699C1294.67 288.836 1294.76 284.192 1295.97 278.81C1299.58 263.424 1312.68 247.104 1335.38 229.852C1358.13 212.621 1384.04 202.052 1413.16 198.168C1415.46 198.689 1417.09 199.644 1418.02 201.032C1418.93 202.378 1419.85 203.203 1420.71 203.55C1421.62 203.854 1422.97 203.637 1424.71 202.942C1426.49 202.204 1428.7 202.074 1431.3 202.595C1433.95 203.072 1436.3 205.156 1438.33 208.845C1441.39 212.729 1442.41 216.896 1441.37 221.345C1438.36 234.366 1427.83 249.535 1409.78 266.831Z" fill="#7ED957"/>
           </svg>
         </h1>
-        <img src="../../public/images/backgrounds/backgroundPlanhce.jpg" alt="image de fond : L'image représente une planche en bois." class="imageTitle">
+        <img src="/images/backgrounds/backgroundMur.jpg" alt="image de l'intérieur du bar titomojito" class="imageTitle">
         <div class="floating-container">
-          <img src="../../public/images/floatImage/glaçon.png" alt="" class="floating-element floating-element-anim">
-          <img src="../../public/images/floatImage/glaçon.png" alt="" class="floating-element floating-element-anim">
-          <img src="../../public/images/floatImage/menthe.png" alt="" class="floating-element floating-element-anim">
-          <img src="../../public/images/floatImage/menthe.png" alt="" class="floating-element floating-element-anim">
-          <img src="../../public/images/floatImage/citron.png" alt="" class="floating-element floating-element-anim">
-          <img src="../../public/images/floatImage/citron.png" alt="" class="floating-element floating-element-anim">
+          <img src="/images/floatImage/glacon.png" alt="" class="floating-element floating-element-anim">
+          <img src="/images/floatImage/glacon.png" alt="" class="floating-element floating-element-anim">
+          <img src="/images/floatImage/menthe.png" alt="" class="floating-element floating-element-anim">
+          <img src="/images/floatImage/menthe.png" alt="" class="floating-element floating-element-anim">
+          <img src="/images/floatImage/citron.png" alt="" class="floating-element floating-element-anim">
+          <img src="/images/floatImage/citron.png" alt="" class="floating-element floating-element-anim">
         </div>
-        <img src="../../public/images/floatImage/4mojitos.png" alt="" class="floating-element_mojito floating-element-anim">
+        <img src="/images/floatImage/4mojitos.png" alt="" class="floating-element_mojito floating-element-anim">
       </div>
     </section>
   </main>

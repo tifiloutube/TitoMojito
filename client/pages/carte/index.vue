@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const cartes = [
-  { type: 'nourriture', nom: 'À mojiter', image: '/images/carte/carteBoissons.png', route: '/carte/boissons' },
-  { type: 'boissons', nom: 'À grignoter', image: '/images/carte/carteNourriture.png', route: '/carte/nourriture' },
+  { type: 'nourriture', nom: 'À grignoter', image: '/images/carte/carteNourriture.jpeg', route: '/carte/nourriture' },
+  { type: 'boissons', nom: 'À mojiter', image: '/images/carte/carteBoissons.jpg', route: '/carte/boissons' },
 ];
 </script>
 

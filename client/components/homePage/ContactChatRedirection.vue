@@ -45,7 +45,7 @@ onUnmounted(() => {
 <template>
   <section class="container" :style="{ clipPath: clipPathValue }">
     <article class="containerImage">
-      <img src="../../public/images/backgrounds/backgroundContact.jpeg" alt="" class="background">
+      <img src="/images/backgrounds/backgroundContact.jpg" alt="" class="background">
       <div class="contact">
         <h2 class="h2">UNE ENVIE ? CONTACTEZ-NOUS</h2>
         <button class="button">Contactez-nous</button>
@@ -93,15 +93,14 @@ onUnmounted(() => {
 
 .button {
   margin-top: 20px;
-  padding: 22px 0px 22px 0px;
-  width: 237px;
+  padding: 11px 36px;
   border-radius: 8px;
   background: #7ED956;
   border: none;
   color: #2B2B2B;
   text-align: center;
-  font-family: "Lexend Tera", sans-serif;
-  font-size: 15px;
+  font-family: "Mr Dafoe", sans-serif;
+  font-size: 30px;
   font-style: normal;
   font-weight: 300;
   line-height: normal;

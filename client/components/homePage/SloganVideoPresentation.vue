@@ -8,7 +8,7 @@
     <article>
       <video src="/videos/videoTitoMojito.webm" autoplay loop muted playsinline></video>
       <div class="container-video">
-        <p>Bienvenue chez <span>titomojito</span>, votre destination incontournable à Toulouse pour un art de <span>"mojiter"</span> unique à 3.90€!</p>
+        <p>Bienvenue chez <span>titomojito</span>, votre destination incontournable à Toulouse pour un art de <span>"mojiter"</span> unique à partir 3.90€!</p>
         <button class="button">
           Nous découvrir
         </button>
@@ -68,18 +68,20 @@ p {
 }
 span {
   color: #7ED956;
+  font-family: "Mr Dafoe", sans-serif;
+  font-size: 35px;
 }
 .button {
   background: #7ED956;
   border-radius: 8px;
   border: none;
   color: #2B2B2B;
-  font-family: "Lexend Tera", sans-serif;
-  font-size: 15px;
+  font-family: "Mr Dafoe", sans-serif;
+  font-size: 30px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  padding: 22px 36px;
+  padding: 11px 36px;
   margin: auto;
 }
 </style>

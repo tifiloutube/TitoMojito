@@ -100,10 +100,10 @@ onMounted(
   margin-bottom: -180px;
 }
 .localisation {
-  color: #FFF;
+  color: #F9F6ED;
   text-align: center;
-  font-family: "Lexend Tera", sans-serif;
-  font-size: 30px;
+  font-family: "Mr Dafoe", sans-serif;
+  font-size: 50px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
