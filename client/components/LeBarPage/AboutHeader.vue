@@ -6,7 +6,7 @@
   <section>
     <article class="container">
       <div class="containerTitle">
-        <img src="../../public/images/backgrounds/backgroundContact.jpg" alt="" class="backgroundImage">
+        <img src="/images/backgrounds/backgroundContact.jpg" alt="" class="backgroundImage">
         <h1 class="h1">LE BAR</h1>
       </div>
       <aside>
@@ -86,5 +86,10 @@ aside {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  text-align: center;
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+
 }
 </style>

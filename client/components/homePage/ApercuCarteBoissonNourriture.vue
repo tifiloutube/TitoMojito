@@ -12,7 +12,7 @@ const cartes = [
       <NuxtLink :to="carte.route" style="position: relative; width: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column;">
         <img :src="carte.image" :alt="`image carte ${carte.type}`">
         <div class="container-name">
-          <h3 class="h3">{{ carte.nom }}</h3>
+          <h4 class="h4">{{ carte.nom }}</h4>
         </div>
       </NuxtLink>
     </article>
@@ -30,11 +30,12 @@ const cartes = [
   grid-column: 7/13;
 }
 .h3 {
+  margin-top: 50px;
   grid-column: 1/13;
   text-align: center;
   color: #2B2B2B;
   font-family: "Mr Dafoe", sans-serif;
-  font-size: 120px;
+  font-size: clamp(35px, 8vw, 100px);
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -46,7 +47,7 @@ const cartes = [
   padding: 5px 20px 5px 20px;
   min-width: 255px;
   transition: box-shadow 0.3s, transform 0.3s;
-  .h3 {
+  .h4 {
     color: #2B2B2B;
     text-align: center;
     font-family: "Mr Dafoe", sans-serif;
@@ -72,5 +73,18 @@ img {
 .container:hover .container-name {
   box-shadow: 5px 4px 0px 0px #2B2B2B;
   transform: translate(-4px, -4px);
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .wrapper {
+    margin-bottom: 0;
+  }
+  .wrapper .container:nth-child(2),
+  .wrapper .container:nth-child(3) {
+    grid-column: 1/13;
+    img {
+      height: 300px;
+    }
+  }
 }
 </style>

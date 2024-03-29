@@ -59,18 +59,6 @@ onMounted(
   gap: 60px;
 }
 
-.h2 {
-  text-align: center;
-  margin-bottom: 45px;
-  margin-left: 50px;
-  color: #2B2B2B;
-  font-family: "Mr Dafoe", sans-serif;
-  font-size: 120px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-
 .mojitoDuMois {
   .saveurMojito {
     border-radius: 20px 20px 0px 0px;
@@ -84,12 +72,24 @@ onMounted(
     width: 100vw;
   }
 }
+
+.h2 {
+  text-align: center;
+  margin-bottom: 45px;
+  margin-left: 50px;
+  color: #2B2B2B;
+  font-family: "Mr Dafoe", sans-serif;
+  font-size: clamp(35px, 10vw, 120px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
 .saveur {
   letter-spacing: -0.08em;
   color: transparent;
   text-align: center;
   font-family: "Lexend Tera", sans-serif;
-  font-size: 180px;
+  font-size: clamp(35px, 15vw, 180px);
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -103,9 +103,19 @@ onMounted(
   color: #F9F6ED;
   text-align: center;
   font-family: "Mr Dafoe", sans-serif;
-  font-size: 50px;
+  font-size: clamp(35px, 3vw, 50px);
   font-style: normal;
   font-weight: 700;
   line-height: normal;
 }
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  img {
+    width: 50%;
+  }
+  .saveur {
+
+  }
+}
+
 </style>

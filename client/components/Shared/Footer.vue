@@ -18,15 +18,26 @@
         <li><NuxtLink to="/carte" style="text-decoration: none; color: #2B2B2B;">La carte</NuxtLink></li>
       </ul>
       <ul class="socialNetwork">
-        <li>Instagram</li>
-        <li>Facebook</li>
+        <li>
+          <a href="https://www.instagram.com/titomojito.toulouse/" target="_blank" style="text-decoration: none; color: #2B2B2B;">Instagram</a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/toulousetitomojito/?show_switched_toast=0&show_invite_to_follow=0&show_switched_tooltip=0&show_podcast_settings=0&show_community_review_changes=0&show_community_rollback=0&show_follower_visibility_disclosure=0" target="_blank" style="text-decoration: none; color: #2B2B2B;">Facebook</a>
+        </li>
+        <li>
+          <a href="https://www.tiktok.com/@titomojito.toulouse?_t=8k4dhueae09&_r=1" target="_blank" style="text-decoration: none; color: #2B2B2B;">TikTok</a>
+        </li>
       </ul>
       <ul class="contact">
-        <li>40 Rue Jean-Baptiste Merly, 31000 Toulouse</li>
-        <li>titomojito@gmail.com</li>
+        <li>
+          <a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x12aebbf86ffe08b1:0xe3ada0abbbee574c?sa=X&ved=1t:8290&ictx=111" style="text-decoration: none; color: #2B2B2B;" target="_blank">40 Rue Jean-Baptiste Merly, 31000 Toulouse</a>
+        </li>
+        <li>
+          <a href="mailto:info@titomojito.fr" style="text-decoration: none; color: #2B2B2B; word-break: break-word;">info@titomojito.fr</a>
+        </li>
       </ul>
     </div>
-    <p class="copyright">Copyright © 2024 par TitoMojito. Tous droits réservés. Developpement & Design credits : VILARINHO Philippe</p>
+    <p class="copyright">Copyright © 2024 par TitoMojito. Tous droits réservés. Developpement & Design credits : <a class="linkdev" href="https://vilarinho-philippe.netlify.app/" target="_blank"> Philippe VILARINHO</a> </p>
   </footer>
 </template>
 
@@ -61,7 +72,6 @@ footer {
   grid-column-start: 9;
   grid-column-end: 13;
 }
-
 span {
   margin-top: 50px;
   margin-bottom: 20px;
@@ -111,5 +121,27 @@ li {
 NuxtLink {
   text-decoration: none;
   color: #2B2B2B;
+}
+
+.linkdev {
+  color: #2B2B2B;
+  font-family: "Lexend Tera", sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  p {
+    font-size: 20px;
+  }
+  a {
+    font-size: 15px;
+  }
+  .copyright {
+    font-size: 10px;
+  }
 }
 </style>

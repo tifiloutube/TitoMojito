@@ -6,18 +6,24 @@
   <section class="container">
     <h2 class="h2">Des mojitos à petits prix pour toute la vie</h2>
     <article>
-      <video src="/videos/videoTitoMojito.webm" autoplay loop muted playsinline></video>
+      <video class="video" src="/videos/videoTitoMojito.webm" autoplay loop muted playsinline></video>
       <div class="container-video">
         <p>Bienvenue chez <span>titomojito</span>, votre destination incontournable à Toulouse pour un art de <span>"mojiter"</span> unique à partir 3.90€!</p>
-        <button class="button">
+        <NuxtLink to="/le-bar" class="button">
           Nous découvrir
-        </button>
+        </NuxtLink>
       </div>
     </article>
   </section>
 </template>
 
 <style scoped>
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .video {
+    height: 50vh;
+  }
+}
+
 .container {
   margin-top: 500px;
 }
@@ -25,7 +31,7 @@
   text-align: center;
   color: #2B2B2B;
   font-family: "Mr Dafoe", sans-serif;
-  font-size: 100px;
+  font-size: clamp(35px, 8vw, 100px);
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -41,7 +47,7 @@ article {
 }
 video {
   object-fit: cover;
-  height: 555px;
+  height: 70vh;
   min-width: 100%;
   filter: blur(7px);
   border-radius: 20px;
@@ -83,5 +89,6 @@ span {
   line-height: normal;
   padding: 11px 36px;
   margin: auto;
+  text-decoration: none;
 }
 </style>

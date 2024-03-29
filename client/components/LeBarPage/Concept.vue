@@ -5,7 +5,7 @@
 <template>
   <section class="wrapper">
     <article class="container-image">
-      <img src="../../public/images/UI/fondateur.jpeg">
+      <img src="/images/UI/fondateur.jpeg">
     </article>
     <article class="container-concept">
       <h2 class="h2">Le concept</h2>
@@ -25,30 +25,36 @@
 </template>
 
 <style scoped>
-  .wrapper {
-    margin-top: 80px;
+.h2 {
+  color: #2B2B2B;
+  font-family: "Mr Dafoe", sans-serif;
+  font-size: 100px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.container-image {
+  grid-column: 1/5;
+  img {
+    width: 100%;
+    height: 485px;
+    border-radius: 20px;
+    object-fit: cover;
   }
-  .h2 {
-    color: #2B2B2B;
-    font-family: "Mr Dafoe", sans-serif;
-    font-size: 100px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-  }
+}
+.container-concept {
+  grid-column: 5/13;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
   .container-image {
-    grid-column: 1/5;
-    img {
-      width: 100%;
-      height: 485px;
-      border-radius: 20px;
-      object-fit: cover;
-    }
+    display: none;
   }
   .container-concept {
-    grid-column: 5/13;
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
+    grid-column: 1/13;
   }
+}
 </style>

@@ -32,7 +32,7 @@ onMounted(
       <ul class="cards">
         <li v-for="(founder, index) in founders" :key="founder.nom" class="card" :style="{ paddingTop: (index * 80) + 'px' }">
           <div class="card-body">
-            <div class="founder" :style="{height: 'calc(80vh - ' + (index * 80) + 'px)'}">
+            <div class="founder" :style="{height: 'calc(50vh - ' + (index * 80) + 'px)'}">
               <div class="founder-info">
                 <h4 class="h4">{{ founder.nom }}</h4>
                 <p>{{ founder.description }}</p>
@@ -52,6 +52,7 @@ onMounted(
 <style scoped>
 .wrapper {
   margin-top: 30px;
+  margin-bottom: 200px;
 }
 .h2 {
   grid-column: 1 / 13;
@@ -101,5 +102,11 @@ img {
   border-radius: 20px;
   object-fit: cover;
   grid-column: 10/13;
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    margin-bottom: 0;
+  }
 }
 </style>

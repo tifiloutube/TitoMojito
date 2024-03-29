@@ -2,11 +2,15 @@
 import { ref, onMounted, nextTick, onUnmounted } from 'vue';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import { Pagination, Autoplay } from 'swiper/modules';
+import 'swiper/css';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const galleryPhotos = ref([]);
 const clipPathValue = ref('inset(0px round 0px)');
+const isMobileView = ref(null);
 let observer;
 
 async function fetchGalleryData() {
@@ -28,7 +32,7 @@ function calculateScrollValue(percentage) {
 function handleScroll() {
   const scrollPosition = window.scrollY;
 
-  const startPercentage = 94;
+  const startPercentage = 92;
   const endPercentage = 100;
 
   const startScroll = calculateScrollValue(startPercentage);
@@ -97,15 +101,32 @@ function animateGalleryImages() {
   });
 }
 
+function handleResize() {
+  isMobileView.value = window.innerWidth < 1025;
+}
+
+const generatePaginationHtml = (current, total) => {
+  let paginationHtml = '';
+  for (let i = 1; i <= total; i++) {
+    const color = i === current ? '#7ED956' : 'white';
+    const fontSize = i === current ? '1.5em' : '1em';
+    paginationHtml += `<span style="color: ${color}; font-size: ${fontSize};" class="pagination-dot${i === current ? ' current-slide' : ''}">.${i}</span> `;
+  }
+  return paginationHtml;
+};
+
 onMounted(async () => {
+  window.addEventListener('resize', handleResize);
   window.addEventListener('scroll', handleScroll);
   await fetchGalleryData();
   await nextTick();
   setupIntersectionObserver();
-  animateGalleryImages(); // Initialise les animations après le chargement des données
+  animateGalleryImages();
+  handleResize();
 });
 
 onUnmounted(() => {
+  window.removeEventListener('resize', handleResize);
   window.removeEventListener('scroll', handleScroll);
   if (observer) {
     observer.disconnect();
@@ -118,10 +139,30 @@ onUnmounted(() => {
   <section class="container" :style="{ clipPath: clipPathValue }">
     <article class="wrapper">
       <h2 class="h2">Le mur des photos</h2>
-      <div class="gallery">
+      <div v-if="!isMobileView" class="gallery">
         <div v-for="photo in galleryPhotos" :key="photo.id" class="gallery-item">
           <img :src="photo.url" :alt="photo.alt" ref="images"/>
         </div>
+      </div>
+      <div v-else >
+        <Swiper :modules="[Pagination, Autoplay]"
+                :slidesPerView="2"
+                :spaceBetween="0"
+                :loop="true"
+                :pagination="{
+                  type: 'custom',
+                  renderCustom: (swiper, current, total) => generatePaginationHtml(current, total),
+                  clickable: true
+                }"
+                :autoplay="{
+                  delay: 5000,
+                  disableOnInteraction: false
+                }"
+        style="text-align: center">
+          <SwiperSlide v-for="photo in galleryPhotos" :key="photo.id" class="gallery-item">
+            <img :src="photo.url" :alt="photo.alt" class="imageSwiper"/>
+          </SwiperSlide>
+        </Swiper>
       </div>
     </article>
   </section>
@@ -139,7 +180,7 @@ onUnmounted(() => {
   grid-column: 1/13;
   color: #F9F6ED;
   font-family: "Mr Dafoe", sans-serif;
-  font-size: 120px;
+  font-size: clamp(50px, 8vw, 120px);
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -158,28 +199,75 @@ onUnmounted(() => {
 }
 .gallery-item:nth-child(6n+1) {
   transform: rotate(-3.015deg);
-  overflow: hidden;
 }
 .gallery-item:nth-child(6n+2) {
   transform: rotate(4.02deg);
-  overflow: hidden;
   padding-top: 150px;
 }
 .gallery-item:nth-child(6n+3) {
   transform: rotate(18.069deg);
-  overflow: hidden;
 }
 .gallery-item:nth-child(6n+4) {
   transform: rotate(-15.099deg);
-  overflow: hidden;
 }
 .gallery-item:nth-child(6n+5) {
   transform: rotate(8.028deg);
-  overflow: hidden;
   padding-top: 150px;
 }
 .gallery-item:nth-child(6n+6) {
   transform: rotate(-18.05deg);
-  overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    display: block;
+  }
+  .gallery-item img {
+    display: flex;
+    margin: auto;
+  }
+  .gallery-item:nth-child(6n+1) {
+    transform: rotate(3.015deg);
+    overflow: hidden;
+    padding: 0;
+  }
+  .gallery-item:nth-child(6n+2) {
+    transform: rotate(-5.02deg);
+    overflow: hidden;
+    padding: 0;
+  }
+  .gallery-item:nth-child(6n+3) {
+    transform: rotate(5.069deg);
+    overflow: hidden;
+    padding: 0;
+  }
+  .gallery-item:nth-child(6n+4) {
+    transform: rotate(-6.099deg);
+    overflow: hidden;
+    padding: 0;
+  }
+  .gallery-item:nth-child(6n+5) {
+    transform: rotate(3.028deg);
+    overflow: hidden;
+    padding: 0;
+  }
+  .gallery-item:nth-child(6n+6) {
+    transform: rotate(-4.05deg);
+    overflow: hidden;
+    padding: 0;
+  }
+  .imageSwiper {
+    display: flex;
+    margin: auto;
+  }
+  .gallery-item {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    display: none;
+  }
 }
 </style>
