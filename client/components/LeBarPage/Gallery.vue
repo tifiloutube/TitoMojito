@@ -6,6 +6,8 @@ import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 
+const config = useRuntimeConfig()
+
 gsap.registerPlugin(ScrollTrigger);
 
 const galleryPhotos = ref([]);
@@ -15,7 +17,8 @@ let observer;
 
 async function fetchGalleryData() {
   try {
-    const response = await fetch('http://localhost:8888/titoMojito/wp-json/wp/v2/posts/173');
+    const url = `${config.public.apiUrl}/173`
+    const response = await fetch(url)
     const data = await response.json();
     galleryPhotos.value = data.acf_fields.galerie_photo;
     await nextTick();
