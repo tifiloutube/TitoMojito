@@ -31,7 +31,7 @@
   text-align: center;
   color: #2B2B2B;
   font-family: "Mr Dafoe", sans-serif;
-  font-size: clamp(35px, 8vw, 100px);
+  font-size: clamp(45px, 8vw, 100px);
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -90,5 +90,24 @@ span {
   padding: 11px 36px;
   margin: auto;
   text-decoration: none;
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    margin-top: 400px;
+  }
+  video {
+    height: 50vh;
+  }
+  .container-video {
+    p {
+      font-size: 15px;
+      width: 90%;
+      margin: auto;
+    }
+    span {
+      font-size: 25px;
+    }
+  }
 }
 </style>

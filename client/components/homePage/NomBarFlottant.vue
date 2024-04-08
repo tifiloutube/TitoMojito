@@ -91,7 +91,7 @@ onMounted(() => {
 }
 
 .title {
-  font-size: clamp(35px, 7vw, 90px);
+  font-size: clamp(50px, 7vw, 90px);
   position: absolute;
   z-index: 10;
   color: white;
@@ -166,8 +166,7 @@ onMounted(() => {
   opacity: 0;
 }
 
-/* Styles pour les tablettes */
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
   .floating-container {
     display: none;
   }
@@ -176,6 +175,19 @@ onMounted(() => {
     .imageTitle {
       height: 500px;
     }
+  }
+  svg {
+    width: 100%;
+  }
+  .floating-element_mojito {
+    width: 500px;
+    height: 500px;
+  }
+}
+
+@media  screen and (max-width: 900px) {
+  .floating-element_mojito {
+    margin-top: -50px;
   }
 }
 </style>

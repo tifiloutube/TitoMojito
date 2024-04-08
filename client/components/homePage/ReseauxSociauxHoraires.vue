@@ -280,7 +280,7 @@ li {
   visibility: hidden;
 }
 
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
+@media  screen and (max-width: 1024px)  {
   .left-part {
     grid-column: 1/13;
     ul {
@@ -293,4 +293,22 @@ li {
   }
 }
 
+@media  screen and (max-width: 900px) {
+  .left-part {
+    grid-column: 1/13;
+    ul {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  }
+  .right-part {
+    grid-column: 1/13;
+    .etablissement > li:nth-child(odd) {
+      grid-column: 1/13;
+    }
+    .etablissement > li:nth-child(even) {
+      grid-column: 1/13;
+    }
+  }
+}
 </style>
