@@ -132,3 +132,13 @@ a {
         font-size: 15px;
     }
 }
+
+@media screen and (max-width: 900px) {
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 15px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

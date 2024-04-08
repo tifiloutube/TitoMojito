@@ -94,7 +94,7 @@ span {
 
 @media screen and (max-width: 900px) {
   .container {
-    margin-top: 400px;
+    margin-top: 300px;
   }
   video {
     height: 50vh;
@@ -108,6 +108,11 @@ span {
     span {
       font-size: 25px;
     }
+  }
+  article {
+    margin-top: 40px;
+    padding-right: 10px;
+    padding-left: 10px;
   }
 }
 </style>

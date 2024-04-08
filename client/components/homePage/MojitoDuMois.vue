@@ -76,10 +76,9 @@ onMounted(
 .h2 {
   text-align: center;
   margin-bottom: 45px;
-  margin-left: 50px;
   color: #2B2B2B;
   font-family: "Mr Dafoe", sans-serif;
-  font-size: clamp(35px, 10vw, 120px);
+  font-size: clamp(45px, 10vw, 120px);
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -89,7 +88,7 @@ onMounted(
   color: transparent;
   text-align: center;
   font-family: "Lexend Tera", sans-serif;
-  font-size: clamp(35px, 15vw, 180px);
+  font-size: clamp(60px, 15vw, 180px);
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -114,7 +113,7 @@ onMounted(
     width: 50%;
   }
   .saveur {
-    margin-bottom: -70px;
+    margin-bottom: -50px;
   }
 }
 

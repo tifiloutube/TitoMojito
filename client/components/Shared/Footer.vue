@@ -133,7 +133,7 @@ NuxtLink {
   text-decoration: none;
 }
 
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
+@media screen and (max-width: 900px) {
   p {
     font-size: 20px;
   }

@@ -11,9 +11,9 @@ const cartes = [
     <article class="container" v-for="carte in cartes" :key="carte.type">
       <NuxtLink :to="carte.route" style="position: relative; width: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column;">
         <img :src="carte.image" :alt="`image carte ${carte.type}`">
-        <div class="container-name">
+        <button class="container-name">
           <h4 class="h4">{{ carte.nom }}</h4>
-        </div>
+        </button>
       </NuxtLink>
     </article>
   </section>
@@ -35,7 +35,7 @@ const cartes = [
   text-align: center;
   color: #2B2B2B;
   font-family: "Mr Dafoe", sans-serif;
-  font-size: clamp(35px, 8vw, 100px);
+  font-size: clamp(45px, 8vw, 100px);
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -51,7 +51,7 @@ const cartes = [
     color: #2B2B2B;
     text-align: center;
     font-family: "Mr Dafoe", sans-serif;
-    font-size: 50px;
+    font-size: clamp(25px, 8vw, 50px);
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -75,6 +75,9 @@ img {
   transform: translate(-4px, -4px);
 }
 
+button {
+  border: none;
+}
 @media  screen and (max-width: 900px)  {
   .wrapper {
     margin-bottom: 0;

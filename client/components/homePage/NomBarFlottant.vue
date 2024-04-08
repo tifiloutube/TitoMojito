@@ -188,6 +188,8 @@ onMounted(() => {
 @media  screen and (max-width: 900px) {
   .floating-element_mojito {
     margin-top: -50px;
+    width: 370px;
+    height: 370px;
   }
 }
 </style>

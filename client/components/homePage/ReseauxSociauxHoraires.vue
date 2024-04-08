@@ -199,7 +199,7 @@ onMounted(() => {
 .h3 {
   color: #2B2B2B;
   font-family: "Mr Dafoe", sans-serif;
-  font-size: 80px;
+  font-size: clamp(45px, 8vw, 80px);
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -305,10 +305,21 @@ li {
     grid-column: 1/13;
     .etablissement > li:nth-child(odd) {
       grid-column: 1/13;
+      gap: 20px;
     }
     .etablissement > li:nth-child(even) {
       grid-column: 1/13;
+      gap: 20px;
     }
+  }
+  .h3 {
+    text-align: center;
+  }
+  .horaire {
+    margin: auto;
+  }
+  .etablissement, .socialNetwork {
+    margin-top: 10px;
   }
 }
 </style>
