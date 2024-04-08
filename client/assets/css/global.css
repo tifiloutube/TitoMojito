@@ -4,6 +4,22 @@
     --tertiary-color: #7ED956;
 }
 
+@font-face {
+    font-family: 'Mr Dafoe';
+    src: url('../../assets/fonts/Mr_Dafoe/WOFF2/MrDafoe-Regular.woff2') format('woff2'),
+    url('../../assets/fonts/Mr_Dafoe/WOFF/MrDafoe-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lexend Tera';
+    src: url('../../assets/fonts/Lexend_Tera/WOFF2/LexendTera-VariableFont_wght.woff2') format('woff2'),
+    url('../../assets/fonts/Lexend_Tera/WOFF/LexendTera-VariableFont_wght.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+
 *,
 *::before,
 *::after {
