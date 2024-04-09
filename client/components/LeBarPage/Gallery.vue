@@ -1,5 +1,5 @@
 <script setup lang="js">
-import { ref, onMounted, nextTick, onUnmounted } from 'vue';
+import { ref, onMounted, nextTick, onUnmounted, useRuntimeConfig } from 'vue';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import { Swiper, SwiperSlide } from 'swiper/vue';
@@ -119,13 +119,17 @@ const generatePaginationHtml = (current, total) => {
 };
 
 onMounted(async () => {
-  window.addEventListener('resize', handleResize);
-  window.addEventListener('scroll', handleScroll);
-  await fetchGalleryData();
-  await nextTick();
-  setupIntersectionObserver();
-  animateGalleryImages();
-  handleResize();
+  if (process.client) {
+    gsap.registerPlugin(ScrollTrigger);
+
+    window.addEventListener('resize', handleResize);
+    window.addEventListener('scroll', handleScroll);
+    await fetchGalleryData();
+    await nextTick();
+    setupIntersectionObserver();
+    animateGalleryImages();
+    handleResize();
+  }
 });
 
 onUnmounted(() => {
