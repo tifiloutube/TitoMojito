@@ -5,6 +5,9 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       apiUrl: process.env.API_URL,
-    }
+    },
+    plugins: [
+      { src: '~/plugins/gsap.js', mode: 'client' }
+    ]
   }
 });
