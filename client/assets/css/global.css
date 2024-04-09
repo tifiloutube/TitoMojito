@@ -16,7 +16,6 @@
     font-family: 'Lexend Tera';
     src: url('../../assets/fonts/Lexend_Tera/WOFF2/LexendTera-VariableFont_wght.woff2') format('woff2'),
     url('../../assets/fonts/Lexend_Tera/WOFF/LexendTera-VariableFont_wght.woff') format('woff');
-    font-weight: 400;
     font-style: normal;
 }
 
