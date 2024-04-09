@@ -226,6 +226,7 @@ onUnmounted(() => {
     display: block;
   }
   .gallery-item img {
+    width: 80%;
     display: flex;
     margin: auto;
   }

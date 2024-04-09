@@ -56,10 +56,6 @@ onUnmounted(() => {
   display: grid;
 }
 
-.h2 {
-  color: #F1ECE8;
-}
-
 .containerEnd {
   background: #7ED956;
   height: 170vh;
@@ -72,6 +68,7 @@ onUnmounted(() => {
   .h2 {
     color: #2B2B2B;
     text-align: center;
+    font-size: clamp(30px, 6vw, 55px);
   }
   a {
     color:  #2B2B2B;

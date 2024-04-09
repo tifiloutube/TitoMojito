@@ -11,9 +11,9 @@ const cartes = [
     <article class="container" v-for="carte in cartes" :key="carte.type">
       <NuxtLink :to="carte.route" style="position: relative; width: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column;">
         <img :src="carte.image" :alt="`image carte ${carte.type}`">
-        <div class="container-name">
+        <button class="container-name button">
           <h3 class="h3">{{ carte.nom }}</h3>
-        </div>
+        </button>
       </NuxtLink>
     </article>
   </section>
@@ -34,7 +34,7 @@ const cartes = [
     text-align: center;
     color: #2B2B2B;
     font-family: "Mr Dafoe", sans-serif;
-    font-size: 120px;
+    font-size: clamp(55px, 6vw, 120px);
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -50,7 +50,7 @@ const cartes = [
       color: #2B2B2B;
       text-align: center;
       font-family: "Mr Dafoe", sans-serif;
-      font-size: 50px;
+      font-size: clamp(25px, 6vw, 50px);
       font-style: normal;
       font-weight: 400;
       line-height: normal;
@@ -72,5 +72,22 @@ const cartes = [
 .container:hover .container-name {
   box-shadow: 5px 4px 0px 0px #2B2B2B;
   transform: translate(-4px, -4px);
+}
+
+@media screen and (max-width: 900px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    .container {
+      img {
+        width: 100%;
+        height: 50vh;
+      }
+      .container-name {
+        padding: 5px 15px 5px 15px;
+        min-width: 150px;
+      }
+    }
+  }
 }
 </style>

@@ -18,7 +18,7 @@
 }
 .h1 {
   font-family: "Mr Dafoe", sans-serif;
-  font-size: 150px;
+  font-size: clamp(80px ,8vw,150px);
   letter-spacing: 0.08em;
   text-shadow: 0px 4px 50px var(--tertiary-color);
 }

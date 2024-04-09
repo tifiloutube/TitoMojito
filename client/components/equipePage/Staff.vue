@@ -94,10 +94,19 @@ onMounted(loadMemberStaff);
 }
 
 img {
-  width: 360px;
-  height: 500px;
+  width: 100%;
+  height: auto;
   border-radius: 20px;
   object-fit: cover;
   grid-column: 10/13;
+}
+
+@media screen and (max-width: 900px) {
+  .member-info {
+    grid-column: 1/7;
+  }
+  img {
+    grid-column: 7/13;
+  }
 }
 </style>
