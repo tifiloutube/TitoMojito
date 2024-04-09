@@ -119,17 +119,13 @@ const generatePaginationHtml = (current, total) => {
 };
 
 onMounted(async () => {
-  if (process.client) {
-    gsap.registerPlugin(ScrollTrigger);
-
-    window.addEventListener('resize', handleResize);
-    window.addEventListener('scroll', handleScroll);
-    await fetchGalleryData();
-    await nextTick();
-    setupIntersectionObserver();
-    animateGalleryImages();
-    handleResize();
-  }
+  window.addEventListener('resize', handleResize);
+  window.addEventListener('scroll', handleScroll);
+  await fetchGalleryData();
+  await nextTick();
+  setupIntersectionObserver();
+  animateGalleryImages();
+  handleResize();
 });
 
 onUnmounted(() => {
