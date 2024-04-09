@@ -182,4 +182,17 @@ li {
   font-weight: 300;
   line-height: normal;
 }
+
+@media screen and (max-width: 900px) {
+  .wrapper {
+    gap: 20px;
+    .h2 {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+    ul {
+      grid-column: 1/13 !important;
+    }
+  }
+}
 </style>

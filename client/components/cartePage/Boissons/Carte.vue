@@ -115,4 +115,17 @@ li {
 .list-boissons_nom_prix {
   animation: slideDown 0.5s ease forwards;
 }
+
+@media screen and (max-width: 900px) {
+  .wrapper {
+    gap: 20px;
+    .h2 {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+    ul {
+      grid-column: 1/13 !important;
+    }
+  }
+}
 </style>

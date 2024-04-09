@@ -40,11 +40,11 @@
     color: #F9F6ED;
   }
   .h1 {
-    font-size: 120px;
+    font-size: clamp(70px, 6vw, 120px);
     letter-spacing: 0.05em;
   }
   .h2 {
-    font-size: 100px;
+    font-size: clamp(50px, 6vw, 100px);
   }
 }
 </style>
