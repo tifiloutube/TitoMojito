@@ -30,7 +30,7 @@
 <style scoped>
 .h1 {
   font-family: "Mr Dafoe", sans-serif;
-  font-size: 150px;
+  font-size: clamp(100px ,8vw,150px);
   letter-spacing: 0.08em;
   text-shadow: 0px 4px 50px var(--tertiary-color);
 }
@@ -62,7 +62,7 @@ aside {
   justify-content: center;
   align-items: center;
   gap: 60px;
-  height: 30vh;
+  min-height: 30vh;
 }
 .info {
   display: flex;
@@ -89,7 +89,15 @@ aside {
   text-align: center;
 }
 
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
-
+@media screen and (max-width: 900px) {
+  aside {
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .info p {
+    font-size: 20px !important;
+  }
 }
 </style>

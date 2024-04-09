@@ -149,7 +149,7 @@ onUnmounted(() => {
       </div>
       <div v-else >
         <Swiper :modules="[Pagination, Autoplay]"
-                :slidesPerView="2"
+                :slidesPerView="1"
                 :spaceBetween="0"
                 :loop="true"
                 :pagination="{
@@ -197,8 +197,8 @@ onUnmounted(() => {
 .gallery-item img {
   display: flex;
   margin: auto;
-  width: 436.193px;
-  height: 600.008px;
+  width: 100%;
+  height: auto;
 }
 .gallery-item:nth-child(6n+1) {
   transform: rotate(-3.015deg);
@@ -269,8 +269,6 @@ onUnmounted(() => {
 }
 
 @media (max-width: 900px) {
-  .container {
-    display: none;
-  }
+
 }
 </style>

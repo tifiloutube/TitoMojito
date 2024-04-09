@@ -28,7 +28,7 @@
 .h2 {
   color: #2B2B2B;
   font-family: "Mr Dafoe", sans-serif;
-  font-size: 100px;
+  font-size: clamp(70px, 8vw, 100px);
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -49,7 +49,7 @@
   gap: 50px;
 }
 
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
+@media screen and (max-width: 900px) {
   .container-image {
     display: none;
   }
