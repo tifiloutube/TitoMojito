@@ -10,7 +10,9 @@ import Gallery from "~/components/LeBarPage/Gallery.vue";
   <AboutHeader />
   <Founders />
   <Concept />
-  <Gallery />
+  <ClientOnly>
+    <Gallery />
+  </ClientOnly>
 </template>
 
 <style scoped>
