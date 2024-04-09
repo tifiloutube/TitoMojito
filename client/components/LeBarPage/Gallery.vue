@@ -1,5 +1,5 @@
 <script setup lang="js">
-import { ref, onMounted, nextTick, onUnmounted, useRuntimeConfig } from 'vue';
+import { ref, onMounted, nextTick, onUnmounted } from 'vue';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import { Swiper, SwiperSlide } from 'swiper/vue';
