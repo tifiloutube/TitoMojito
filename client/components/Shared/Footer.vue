@@ -174,6 +174,12 @@ NuxtLink {
   font-weight: 300;
   line-height: normal;
   text-decoration: none;
+  transition: ease 0.5s;
+}
+
+.linkdev:hover {
+  color: #7ed956;
+  transition: ease 0.5s;
 }
 
 @media screen and (max-width: 900px) {

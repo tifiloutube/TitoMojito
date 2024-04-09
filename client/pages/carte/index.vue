@@ -3,6 +3,10 @@ const cartes = [
   { type: 'nourriture', nom: 'À grignoter', image: '/images/carte/carteNourriture.jpeg', route: '/carte/nourriture' },
   { type: 'boissons', nom: 'À mojiter', image: '/images/carte/carteBoissons.jpg', route: '/carte/boissons' },
 ];
+
+useHead({
+  title: 'TitoMojito - Bar à mojitos'
+})
 </script>
 
 <template>

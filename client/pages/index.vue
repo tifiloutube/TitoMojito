@@ -7,6 +7,9 @@ import ApercuCarteBoissonNourriture from "~/components/homePage/ApercuCarteBoiss
 import ReseauxSociauxHoraires from "~/components/homePage/ReseauxSociauxHoraires.vue";
 import ContactChatRedirection from "~/components/homePage/ContactChatRedirection.vue";
 
+useHead({
+  title: 'TitoMojito - Bar à mojitos'
+})
 </script>
 
 <template>
