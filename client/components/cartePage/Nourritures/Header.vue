@@ -38,6 +38,7 @@
   .h2, .h1 {
     font-family: "Mr Dafoe", sans-serif;
     color: #F9F6ED;
+    text-shadow: 0px 4px 50px #7ED956;
   }
   .h1 {
     font-size: clamp(70px, 6vw, 120px);

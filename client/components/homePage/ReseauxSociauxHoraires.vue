@@ -280,6 +280,9 @@ li {
   visibility: hidden;
 }
 
+svg {
+  min-width: 62px;
+}
 @media  screen and (max-width: 1024px)  {
   .left-part {
     grid-column: 1/13;
