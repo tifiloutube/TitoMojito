@@ -5,7 +5,7 @@
 <template>
   <section>
     <article class="container">
-      <img src="/images/carte/carteBoissons.jpg" alt="image de background représentant des tapas">
+      <img src="/images/carte/backgroundContact.webp" alt="image de background représentant des tapas">
       <div class="title">
         <h1 class="h1">LA CARTE</h1>
         <h2 class="h2">Boissons</h2>

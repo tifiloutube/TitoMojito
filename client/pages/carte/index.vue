@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const cartes = [
-  { type: 'nourriture', nom: 'À grignoter', image: '/images/carte/carteNourriture.jpeg', route: '/carte/nourriture' },
-  { type: 'boissons', nom: 'À mojiter', image: '/images/carte/carteBoissons.jpg', route: '/carte/boissons' },
+  { type: 'nourriture', nom: 'À grignoter', image: '/images/carte/carteNourriture.webp', route: '/carte/nourriture' },
+  { type: 'boissons', nom: 'À mojiter', image: '/images/carte/backgroundContact.webp', route: '/carte/boissons' },
 ];
 
 useHead({

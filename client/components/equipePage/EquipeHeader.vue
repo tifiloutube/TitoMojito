@@ -5,7 +5,7 @@
 <template>
   <section class="container">
     <div class="containerTitle">
-      <img src="/images/backgrounds/backgroundContact.jpg" alt="" class="backgroundImage">
+      <img src="/images/backgrounds/backgroundContact.webp" alt="" class="backgroundImage">
       <h1 class="h1">LE STAFF</h1>
     </div>
   </section>

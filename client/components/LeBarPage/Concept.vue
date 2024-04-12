@@ -5,7 +5,7 @@
 <template>
   <section class="wrapper">
     <article class="container-image">
-      <img src="/images/UI/fondateur.jpeg">
+      <img src="/images/UI/fondateur.webp">
     </article>
     <article class="container-concept">
       <h2 class="h2">Le concept</h2>
