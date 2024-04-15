@@ -4,9 +4,9 @@ import { ref, onMounted } from 'vue';
 const isOpenWidth = ref(false);
 const isOpenHeight = ref(false);
 const showMenuItems = ref(false);
-const menuList = ref(null); // Référence à l'élément ul
+const menuList = ref(null);
 
-// Appliquer la transition dès que le composant est monté
+
 onMounted(() => {
   if (menuList.value) {
     menuList.value.style.transition = 'opacity 0.5s ease-in-out';
@@ -441,11 +441,11 @@ function closeMenu() {
     }
   }
   .open-width {
-    width: 800px; /* Largeur finale après première étape */
+    width: 800px;
   }
 
   .open-height {
-    height: 30vh; /* Hauteur finale après deuxième étape */
+    height: 255px;
   }
 
   ul {
