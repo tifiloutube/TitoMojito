@@ -150,7 +150,7 @@ li {
 
 .copyright {
   margin-top: 120px;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   width: 100vw;
   text-align: center;
   color: #2B2B2B;

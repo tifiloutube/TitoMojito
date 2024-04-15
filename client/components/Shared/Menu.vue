@@ -411,7 +411,7 @@ function closeMenu() {
 <style scoped>
   nav {
     position: fixed;
-    bottom: 2%;
+    bottom: 3%;
     left: 50%;
     transform: translate(-50%, 0%);
     backdrop-filter: blur(30px);
