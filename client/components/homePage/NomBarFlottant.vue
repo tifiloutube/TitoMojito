@@ -4,6 +4,7 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 import { onMounted } from 'vue';
 
 onMounted(() => {
+  gsap.set('.floating-element-anim', { opacity: 0, y: 50 });
   gsap.registerPlugin(ScrollTrigger);
 
   gsap.to('.title', {
@@ -124,6 +125,10 @@ onMounted(() => {
 .floating-element {
   position: absolute;
   opacity: 0;
+}
+.floating-element-anim {
+  opacity: 0;
+  transform: translateY(50px);
 }
 
 .floating-container img:nth-child(1) {

@@ -105,7 +105,7 @@ function closeMenu() {
     <div class="menu">
       <button @click="toggleMenu">Menu</button>
       <span class="separator"></span>
-      <NuxtLink to="/">
+      <NuxtLink  @click="closeMenu" to="/">
         <svg width="90" height="60" viewBox="0 0 90 60" fill="none" xmlns="http://www.w3.org/2000/svg">
           <mask id="mask0_927_500" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="14" y="41" width="59" height="19">
             <path d="M72.6738 41.6226H14.8094V60.0001H72.6738V41.6226Z" fill="white"/>
@@ -433,6 +433,7 @@ function closeMenu() {
       left: 50%;
       grid-template-columns: 1fr 1px 1fr 1px 1fr;
       :nth-child(1) {
+        cursor: pointer;
         border: none;
         background: none;
         font-size: 33px;
@@ -463,7 +464,7 @@ function closeMenu() {
   }
 
   .open-height {
-    height: 255px;
+    height: 300px;
   }
 
   ul {
@@ -478,6 +479,7 @@ function closeMenu() {
     padding-left: 15px;
     padding-right: 15px;
     li {
+      cursor: pointer;
       font-family: "Mr Dafoe", sans-serif;
       color: #2B2B2B !important;
       font-size: 40px;
