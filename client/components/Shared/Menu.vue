@@ -436,7 +436,7 @@ function closeMenu() {
       .separator {
         height: 100%;
         background-color: #2B2B2B;
-        width: 2px;
+        width: 1px;
       }
     }
   }
