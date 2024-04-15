@@ -474,7 +474,7 @@ function closeMenu() {
     grid-template-columns: 1fr 20px 1fr;
     grid-template-rows: repeat(3, 1fr);
     margin: 2% auto auto;
-    height: 150px;
+    height: 260px;
     padding-left: 25px;
     padding-right: 25px;
     li {
