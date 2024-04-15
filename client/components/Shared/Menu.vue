@@ -100,7 +100,6 @@ function closeMenu() {
       <li @click="closeMenu">
         <NuxtLink to="/carte">Les cartes</NuxtLink>
       </li>
-      <span class="separator"></span>
     </ul>
     <div class="menu">
       <button @click="toggleMenu">Menu</button>
@@ -501,5 +500,35 @@ function closeMenu() {
   a:hover {
     color: #7ed956 !important;
     transition: ease 0.2s;
+  }
+  
+  @media screen and (max-width: 900px) {
+    .open-width {
+      width: 80vw;
+    }
+
+    .open-height {
+      height: 400px;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    nav {
+      width: 40vw;
+      height: 50px;
+      bottom: 5%;
+      .menu {
+        height: 50px;
+        display: grid;
+        grid-template-columns: 1fr !important;
+        svg, span, h3 {
+          display: none;
+        }
+      }
+    }
   }
 </style>
