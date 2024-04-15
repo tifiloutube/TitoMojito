@@ -473,11 +473,10 @@ function closeMenu() {
     display: grid;
     grid-template-columns: 1fr 20px 1fr;
     grid-template-rows: repeat(3, 1fr);
-    margin: auto;
-    margin-top: 2%;
+    margin: 2% auto auto;
     height: 150px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
     li {
       cursor: pointer;
       font-family: "Mr Dafoe", sans-serif;
