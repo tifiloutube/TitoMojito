@@ -488,6 +488,7 @@ function closeMenu() {
       border-bottom: 1px solid #2B2B2B;
       a {
         color: #2B2B2B;
+        transition: ease 0.2s;
       }
     }
     li:nth-child(odd) {
@@ -496,5 +497,9 @@ function closeMenu() {
     li:nth-child(even) {
       grid-column: 3/4;
     }
+  }
+  a:hover {
+    color: #7ed956 !important;
+    transition: ease 0.2s;
   }
 </style>
