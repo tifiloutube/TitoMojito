@@ -15,9 +15,6 @@ async function loadMemberStaff() {
 
     const data = await response.json();
     staff.value = data.acf_fields.equipe;
-
-    console.log(data);
-    console.log(staff.value);
   } catch (error) {
     console.error("Erreur lors de la requête fetch:", error);
   }

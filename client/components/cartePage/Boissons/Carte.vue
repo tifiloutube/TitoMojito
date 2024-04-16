@@ -17,8 +17,6 @@ async function loadCarteBoisson() {
     const data = await response.json();
     carteBoisson.value = data.acf_fields.carte_boisson;
 
-    console.log(data);
-    console.log(carteBoisson.value);
   } catch (error) {
     console.error("Erreur lors de la requête fetch:", error);
   }

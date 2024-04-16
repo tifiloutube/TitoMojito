@@ -75,6 +75,10 @@ function toggleMenu() {
   }
 }
 
+function closeOnMouseLeave() {
+  closeMenu();
+}
+
 function openMenu() {
   isOpenWidth.value = true;
   setTimeout(() => {
@@ -118,7 +122,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <nav ref="navElement" :class="[{ 'open-width': isOpenWidth }, { 'open-height': isOpenHeight }, { 'nav-hidden': !isNavVisible }]">
+  <nav ref="navElement" :class="[{ 'open-width': isOpenWidth }, { 'open-height': isOpenHeight }, { 'nav-hidden': !isNavVisible }]" @mouseleave="closeOnMouseLeave">
   <ul ref="menuList" v-show="showMenuItems">
       <li @click="closeMenu">
         <NuxtLink to="/">Acceuil</NuxtLink>

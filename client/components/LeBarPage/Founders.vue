@@ -13,8 +13,6 @@ async function loadFounders() {
     }
     const data = await response.json();
     founders.value = data.acf_fields.membre_du_staff;
-    console.log(data)
-    console.log(founders)
   } catch (error) {
     console.error("Erreur lors de la requête fetch:", error)
   }

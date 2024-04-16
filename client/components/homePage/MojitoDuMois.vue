@@ -27,9 +27,6 @@ async function loadMojitosDuMois() {
         };
       });
     }
-
-    console.log(data);
-    console.log(mojitosDuMois.value);
   } catch (error) {
     console.error("Erreur lors de la requête fetch:", error);
   }
