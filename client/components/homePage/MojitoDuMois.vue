@@ -101,7 +101,7 @@ onMounted(
 .localisation {
   color: #F9F6ED;
   text-align: center;
-  font-family: "Mr Dafoe", sans-serif;
+  font-family: "Lexend Tera", sans-serif;
   font-size: clamp(35px, 3vw, 50px);
   font-style: normal;
   font-weight: 700;
