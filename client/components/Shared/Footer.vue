@@ -149,8 +149,8 @@ li {
 }
 
 .copyright {
-  margin-top: 120px;
-  margin-bottom: 5px;
+  margin-top: 125px;
+  margin-bottom: 125px;
   width: 100vw;
   text-align: center;
   color: #2B2B2B;
