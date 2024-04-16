@@ -48,7 +48,7 @@ onUnmounted(() => {
       <img src="/images/backgrounds/backgroundContact.webp" alt="" class="background">
       <div class="contact">
         <h2 class="h2">UNE ENVIE ? CONTACTEZ-NOUS</h2>
-        <button class="button">Contactez-nous</button>
+        <a class="button" href="mailto:info@titomojito.fr?subject=Candidature">Contactez-nous</a>
       </div>
     </article>
     <article class="containerEnd">
@@ -84,7 +84,13 @@ onUnmounted(() => {
 .contact {
   position: absolute;
   text-align: center;
+  display: flex;
+  flex-direction: column;
   width: 100%;
+  align-items: center;
+  a {
+    width: 250px;
+  }
 }
 
 .h2 {
