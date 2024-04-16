@@ -488,9 +488,6 @@ onUnmounted(() => {
     transform: translate(-50%, 150%);
     transition: transform 0.5s ease-in-out;
   }
-  .nav-visible {
-
-  }
   .open-width {
     width: 800px;
   }
