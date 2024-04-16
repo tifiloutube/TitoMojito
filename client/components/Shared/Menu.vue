@@ -1,5 +1,5 @@
 <script setup lang="js">
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 import { useRoute } from 'vue-router'
 
 const isOpenWidth = ref(false);
@@ -7,6 +7,7 @@ const isOpenHeight = ref(false);
 const showMenuItems = ref(false);
 const menuList = ref(null);
 const isNavVisible = ref(null);
+const navElement = ref(null);
 const route = useRoute();
 
 const routeName = computed(() => {
@@ -27,14 +28,19 @@ function resetHideTimer() {
   if (hideTimeout) {
     clearTimeout(hideTimeout);
   }
-  if (!isNavVisible.value) {
-    isNavVisible.value = true;
-    nav.style.transform = 'translate(-50%, 0%)';
+  if (navElement.value) {
+    if (!isNavVisible.value) {
+      navElement.value.style.transform = 'translate(-50%, 0%)';
+      isNavVisible.value = true;
+    }
+
+    hideTimeout = setTimeout(() => {
+      if (navElement.value) {
+        navElement.value.style.transform = 'translate(-50%, 150%)';
+        isNavVisible.value = false;
+      }
+    }, 2000);
   }
-  hideTimeout = setTimeout(() => {
-    isNavVisible.value = false;
-    nav.style.transform = 'translate(-50%, 150%)';
-  }, 1500);
 }
 
 function toggleMenu() {
@@ -112,7 +118,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <nav :class="[{ 'open-width': isOpenWidth }, { 'open-height': isOpenHeight }, { 'nav-hidden': !isNavVisible }]">
+  <nav ref="navElement" :class="[{ 'open-width': isOpenWidth }, { 'open-height': isOpenHeight }, { 'nav-hidden': !isNavVisible }]">
   <ul ref="menuList" v-show="showMenuItems">
       <li @click="closeMenu">
         <NuxtLink to="/">Acceuil</NuxtLink>
@@ -485,7 +491,7 @@ onUnmounted(() => {
     }
   }
   .nav-hidden {
-    transform: translate(-50%, 150%);
+    transform: translate(-50%, 200%);
     transition: transform 0.5s ease-in-out;
   }
   .open-width {
