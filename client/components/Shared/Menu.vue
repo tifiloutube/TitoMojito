@@ -6,6 +6,7 @@ const isOpenWidth = ref(false);
 const isOpenHeight = ref(false);
 const showMenuItems = ref(false);
 const menuList = ref(null);
+const isNavVisible = ref(null);
 const route = useRoute();
 
 const routeName = computed(() => {
@@ -20,11 +21,21 @@ const routeName = computed(() => {
   }
 });
 
-onMounted(() => {
-  if (menuList.value) {
-    menuList.value.style.transition = 'opacity 0.5s ease-in-out';
+let hideTimeout = null;
+
+function resetHideTimer() {
+  if (hideTimeout) {
+    clearTimeout(hideTimeout);
   }
-});
+  if (!isNavVisible.value) {
+    isNavVisible.value = true;
+    nav.style.transform = 'translate(-50%, 0%)';
+  }
+  hideTimeout = setTimeout(() => {
+    isNavVisible.value = false;
+    nav.style.transform = 'translate(-50%, 150%)';
+  }, 1500);
+}
 
 function toggleMenu() {
   if (!isOpenWidth.value && !isOpenHeight.value) {
@@ -42,9 +53,8 @@ function toggleMenu() {
     }, 300);
   } else {
     if (menuList.value) {
-      // Assurer un délai avant de cacher pour permettre à la transition de se jouer
       setTimeout(() => {
-        menuList.value.style.opacity = '0'; // Applique l'opacité pour cacher avec transition
+        menuList.value.style.opacity = '0';
       }, 20);
     }
     setTimeout(() => {
@@ -83,11 +93,27 @@ function closeMenu() {
     }, 10);
   }, 10);
 }
+
+onMounted(() => {
+  if (menuList.value) {
+    menuList.value.style.transition = 'opacity 0.5s ease-in-out';
+  }
+  window.addEventListener('mousemove', resetHideTimer);
+  window.addEventListener('scroll', resetHideTimer);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('mousemove', resetHideTimer);
+  window.removeEventListener('scroll', resetHideTimer);
+  if (hideTimeout) {
+    clearTimeout(hideTimeout);
+  }
+});
 </script>
 
 <template>
-  <nav :class="[{ 'open-width': isOpenWidth }, { 'open-height': isOpenHeight }]">
-    <ul ref="menuList" v-show="showMenuItems">
+  <nav :class="[{ 'open-width': isOpenWidth }, { 'open-height': isOpenHeight }, { 'nav-hidden': !isNavVisible }]">
+  <ul ref="menuList" v-show="showMenuItems">
       <li @click="closeMenu">
         <NuxtLink to="/">Acceuil</NuxtLink>
       </li>
@@ -420,7 +446,7 @@ function closeMenu() {
     border-radius: 8px;
     width: 500px;
     height: 80px;
-    transition: width 0.5s, height 0.5s;
+    transition: width 0.5s, height 0.5s, transform 0.5s ease-in-out;
     .menu {
       display: grid;
       padding: 5px 0px;
@@ -457,6 +483,13 @@ function closeMenu() {
         width: 1px;
       }
     }
+  }
+  .nav-hidden {
+    transform: translate(-50%, 150%);
+    transition: transform 0.5s ease-in-out;
+  }
+  .nav-visible {
+
   }
   .open-width {
     width: 800px;
