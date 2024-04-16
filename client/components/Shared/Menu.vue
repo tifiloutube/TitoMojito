@@ -567,7 +567,7 @@ onUnmounted(() => {
       }
     }
     .nav-hidden {
-      transform: translate(-50%, 300%);
+      transform: translate(-50%, 400%) !important;
       transition: transform 0.5s ease-in-out;
     }
   }
