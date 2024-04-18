@@ -77,7 +77,6 @@ onUnmounted(() => {
   width: 100vw;
   object-fit: cover;
   border-radius: 20px 20px 0px 0px;
-  filter: blur(7.5px);
   max-height: 555px;
 }
 
