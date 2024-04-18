@@ -1,6 +1,6 @@
 <script setup lang="js">
 import { ref, onMounted, onUnmounted } from 'vue';
-import { useRoute } from 'vue-router'
+import { useRoute } from 'vue-router';
 
 const isOpenWidth = ref(false);
 const isOpenHeight = ref(false);
@@ -8,6 +8,7 @@ const showMenuItems = ref(false);
 const menuList = ref(null);
 const isNavVisible = ref(null);
 const navElement = ref(null);
+const menuFullyOpened = ref(false);  // Ajout d'un indicateur pour le menu complètement ouvert
 const route = useRoute();
 
 const routeName = computed(() => {
@@ -16,8 +17,8 @@ const routeName = computed(() => {
     case '/le-bar': return 'Le bar';
     case '/equipe': return 'L’équipe';
     case '/carte': return 'Les cartes';
-    case '/carte/nourriture': return 'Nourritures'
-    case '/carte/boissons': return 'Boissons'
+    case '/carte/nourriture': return 'Nourritures';
+    case '/carte/boissons': return 'Boissons';
     default: return 'Page Inconnue';
   }
 });
@@ -53,11 +54,18 @@ function toggleMenu() {
         if (menuList.value) {
           setTimeout(() => {
             menuList.value.style.opacity = '1';
+            menuFullyOpened.value = true;  // Indicateur mis à true lorsque le menu est complètement ouvert
+            setTimeout(() => {
+              // Activation de la possibilité de fermeture par mouseleave après 2 secondes
+              navElement.value.addEventListener('mouseleave', closeOnMouseLeave);
+            }, 2000);
           }, 20);
         }
       }, 300);
     }, 300);
   } else {
+    menuFullyOpened.value = false;  // Réinitialiser l'indicateur lorsque le menu commence à se fermer
+    navElement.value.removeEventListener('mouseleave', closeOnMouseLeave); // Désactiver l'écouteur d'événements lorsque le menu commence à se fermer
     if (menuList.value) {
       setTimeout(() => {
         menuList.value.style.opacity = '0';
@@ -76,7 +84,9 @@ function toggleMenu() {
 }
 
 function closeOnMouseLeave() {
-  closeMenu();
+  if (menuFullyOpened.value) {
+    closeMenu();
+  }
 }
 
 function openMenu() {
