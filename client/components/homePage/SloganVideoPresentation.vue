@@ -25,7 +25,7 @@
 }
 
 .container {
-  margin-top: 500px;
+  margin-top: 100px;
 }
 .h2 {
   text-align: center;
@@ -49,7 +49,6 @@ video {
   object-fit: cover;
   height: 70vh;
   min-width: 100%;
-  filter: blur(7px);
   border-radius: 20px;
 }
 .container-video {
@@ -76,20 +75,6 @@ span {
   color: #7ED956;
   font-family: "Mr Dafoe", sans-serif;
   font-size: 35px;
-}
-.button {
-  background: #7ED956;
-  border-radius: 8px;
-  border: none;
-  color: #2B2B2B;
-  font-family: "Mr Dafoe", sans-serif;
-  font-size: 30px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  padding: 11px 36px;
-  margin: auto;
-  text-decoration: none;
 }
 
 @media screen and (max-width: 900px) {

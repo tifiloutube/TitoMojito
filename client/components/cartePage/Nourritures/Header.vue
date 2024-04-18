@@ -17,7 +17,6 @@
 <style scoped>
 .container {
   width: 100vw;
-  background-color: #7ED956;
   border-radius: 20px;
   position: relative;
   display: flex;
@@ -28,7 +27,6 @@
     height: 100vh;
     object-fit: cover;
     border-radius: 20px;
-    filter: blur(7.5px);
     position: relative;
   }
   .title {

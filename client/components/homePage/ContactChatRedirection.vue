@@ -47,7 +47,7 @@ onUnmounted(() => {
     <article class="containerImage">
       <img src="/images/backgrounds/backgroundContact.webp" alt="" class="background">
       <div class="contact">
-        <h2 class="h2">UNE ENVIE ? CONTACTEZ-NOUS</h2>
+        <h2 class="h2">UNE ENVIE ? UN DESIR ? UNE QUESTION ?</h2>
         <a class="button" href="mailto:info@titomojito.fr?subject=Candidature">Contactez-nous</a>
       </div>
     </article>
@@ -95,27 +95,15 @@ onUnmounted(() => {
 
 .h2 {
   color: #F1ECE8;
-  font-size: clamp(20px, 4vw, 55px);
+  font-size: clamp(20px, 4vw, 50px);
 }
-
 .button {
-  margin-top: 20px;
-  padding: 11px 36px;
-  border-radius: 8px;
-  background: #7ED956;
-  border: none;
-  color: #2B2B2B;
-  text-align: center;
-  font-family: "Mr Dafoe", sans-serif;
-  font-size: 30px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: normal;
+  margin-top: 10px;
 }
 
 .containerEnd {
   background: #7ED956;
-  height: 170vh;
+  height: 100vh;
   width: 100vw;
   display: flex;
   align-items: center;

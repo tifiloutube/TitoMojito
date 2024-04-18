@@ -47,20 +47,21 @@ body {
 
 .button {
     border-radius: 10px;
-    background: var(--tertiary-color);
-    padding: 15px 40px;
-    color: var(--color-primary);
+    background: var(--color-primary);
+    padding: 11px 40px;
+    color: var(--color-secondary);
     text-align: center;
     font-family: "Mr Dafoe", sans-serif;
-    font-size: 15px;
+    font-size: 30px;
     font-style: normal;
     font-weight: 300;
+    margin: auto;
     line-height: normal;
     border: none;
     transition: box-shadow 0.3s, transform 0.3s;
 }
 .button:hover {
-    box-shadow: 5px 4px 0px 0px #2B2B2B;
+    box-shadow: 5px 4px 0px 0px #7ED956;
     transform: translate(-4px, -4px);
 }
 

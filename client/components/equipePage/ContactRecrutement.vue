@@ -58,7 +58,7 @@ onUnmounted(() => {
 
 .containerEnd {
   background: #7ED956;
-  height: 170vh;
+  height: 100vh;
   width: 100vw;
   display: flex;
   align-items: center;

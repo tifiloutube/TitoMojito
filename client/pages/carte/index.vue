@@ -16,7 +16,7 @@ useHead({
       <NuxtLink :to="carte.route" style="position: relative; width: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column;">
         <img :src="carte.image" :alt="`image carte ${carte.type}`">
         <button class="container-name button">
-          <h3 class="h3">{{ carte.nom }}</h3>
+          {{ carte.nom }}
         </button>
       </NuxtLink>
     </article>
@@ -45,20 +45,7 @@ useHead({
   }
   .container-name {
     position: absolute;
-    border-radius: 8px;
-    background: #7ED956;
-    padding: 5px 20px 5px 20px;
-    min-width: 255px;
     transition: box-shadow 0.3s, transform 0.3s;
-    .h3 {
-      color: #2B2B2B;
-      text-align: center;
-      font-family: "Mr Dafoe", sans-serif;
-      font-size: clamp(25px, 6vw, 50px);
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-    }
   }
   img {
     width: 100%;
@@ -66,15 +53,19 @@ useHead({
     border-radius: 20px;
     object-fit: cover;
     transition: filter 0.3s;
-    filter: blur(5px);
+    filter: blur(2px);
   }
 
 .container:hover img {
   filter: blur(0px);
 }
+.button {
+  font-size: 45px;
+  padding: 11px 60px;
+}
 
 .container:hover .container-name {
-  box-shadow: 5px 4px 0px 0px #2B2B2B;
+  box-shadow: 5px 4px 0px 0px #7ED956;
   transform: translate(-4px, -4px);
 }
 

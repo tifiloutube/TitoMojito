@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const cartes = [
   { type: 'nourriture', nom: 'On grignote quoi ?', image: '/images/carte/carteNourriture.jpeg', route: '/carte/nourriture' },
-  { type: 'boissons', nom: 'On mijote quoi ?', image: '/images/carte/carteBoissons.jpg', route: '/carte/boissons' },
+  { type: 'boissons', nom: 'On mojite quoi ?', image: '/images/carte/carteBoissons.jpg', route: '/carte/boissons' },
 ];
 </script>
 
@@ -11,8 +11,8 @@ const cartes = [
     <article class="container" v-for="carte in cartes" :key="carte.type">
       <NuxtLink :to="carte.route" style="position: relative; width: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column;">
         <img :src="carte.image" :alt="`image carte ${carte.type}`">
-        <button class="container-name">
-          <h4 class="h4">{{ carte.nom }}</h4>
+        <button class="container-name button">
+          {{ carte.nom }}
         </button>
       </NuxtLink>
     </article>
@@ -42,20 +42,10 @@ const cartes = [
 }
 .container-name {
   position: absolute;
-  border-radius: 8px;
-  background: #7ED956;
-  padding: 5px 20px 5px 20px;
-  min-width: 255px;
   transition: box-shadow 0.3s, transform 0.3s;
-  .h4 {
-    color: #2B2B2B;
-    text-align: center;
-    font-family: "Mr Dafoe", sans-serif;
-    font-size: clamp(25px, 8vw, 50px);
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-  }
+}
+.button {
+  font-size: 45px;
 }
 img {
   width: 100%;
@@ -63,7 +53,7 @@ img {
   border-radius: 20px;
   object-fit: cover;
   transition: filter 0.3s;
-  filter: blur(5px);
+  filter: blur(2px);
 }
 
 .container:hover img {
@@ -71,7 +61,7 @@ img {
 }
 
 .container:hover .container-name {
-  box-shadow: 5px 4px 0px 0px #2B2B2B;
+  box-shadow: 5px 4px 0px 0px #7ED956;
   transform: translate(-4px, -4px);
 }
 

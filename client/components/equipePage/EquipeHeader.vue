@@ -13,7 +13,7 @@
 
 <style scoped>
 .container {
-  background-color: #7ED956;
+  background-color: #2b2b2b;
   border-radius: 20px;
 }
 .h1 {
@@ -34,7 +34,6 @@
   height: 100vh;
   object-fit: cover;
   border-radius: 20px;
-  filter: blur(7.5px);
   position: relative;
 }
 .h1 {

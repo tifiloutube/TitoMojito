@@ -35,7 +35,7 @@
   text-shadow: 0px 4px 50px var(--tertiary-color);
 }
 .container {
-  background-color: #7ED956;
+  background-color: #2b2b2b;
   border-radius: 20px;
 }
 .containerTitle {
@@ -50,7 +50,6 @@
   height: 100vh;
   object-fit: cover;
   border-radius: 20px;
-  filter: blur(7.5px);
 }
 .h1 {
   position: absolute;
@@ -71,7 +70,7 @@ aside {
   flex-direction: column;
 }
 .info p:nth-child(1) {
-  color: #2B2B2B;
+  color: #f9f6ed;
   font-family: "Lexend Tera", sans-serif;
   font-size: 50px;
   font-style: normal;
@@ -80,7 +79,7 @@ aside {
 }
 
 .info p:nth-child(2) {
-  color: #2B2B2B;
+  color: #f9f6ed;
   font-family: "Lexend Tera", sans-serif;
   font-size: 25px;
   font-style: normal;
