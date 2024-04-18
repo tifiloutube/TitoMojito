@@ -39,7 +39,7 @@ function resetHideTimer() {
         navElement.value.style.transform = 'translate(-50%, 150%)';
         isNavVisible.value = false;
       }
-    }, 2500);
+    }, 5000);
   }
 }
 
