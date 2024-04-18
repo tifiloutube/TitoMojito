@@ -14,9 +14,10 @@
           <p>2</p>
           <p>Le nombre de bars</p>
         </div>
-        <div class="info">
+        <div class="info mojito">
           <p>3.90</p>
           <p>Le prix du mojito</p>
+          <p>*virgin</p>
         </div>
         <div class="info">
           <p>1</p>
@@ -85,6 +86,20 @@ aside {
   font-weight: 400;
   line-height: normal;
   text-align: center;
+}
+
+.info p:nth-child(3) {
+  color: #f9f6ed;
+  font-family: "Bradley Hand", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+}
+
+.mojito {
+  padding-top: 18px;
 }
 
 @media screen and (max-width: 900px) {
