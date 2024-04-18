@@ -112,5 +112,17 @@ aside {
   .info p {
     font-size: 20px !important;
   }
+  .mojito p:nth-child(3) {
+    color: #f9f6ed;
+    font-family: "Bradley Hand", sans-serif;
+    font-size: 13px !important;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+  }
+  .mojito {
+    padding-top: 0;
+  }
 }
 </style>

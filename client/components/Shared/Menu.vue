@@ -451,6 +451,7 @@ onUnmounted(() => {
     transform: translate(-50%, 0%);
     backdrop-filter: blur(30px);
     background-color: rgba(43, 43, 43, 0.5);
+    border: 1px dashed black;
     z-index: 100;
     border-radius: 8px;
     width: 500px;
