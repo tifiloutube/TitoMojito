@@ -98,7 +98,7 @@ onMounted(() => {
   color: white;
   text-align: center;
   opacity: 0;
-  margin-top: -400px;
+  margin-top: -200px;
 }
 
 .floating-container {
