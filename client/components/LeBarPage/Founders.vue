@@ -54,7 +54,6 @@ onMounted(
 .h2 {
   grid-column: 1 / 13;
   color: #2B2B2B;
-  font-family: "Mr Dafoe", sans-serif;
   font-size: clamp(70px , 8vw , 120px);
   font-style: normal;
   font-weight: 400;
@@ -102,6 +101,9 @@ img {
   grid-column: 10/13;
 }
 
+.h4 {
+  font-size: 50px;
+}
 @media screen and (max-width: 900px) {
   .founder-info {
     grid-column: 1/7;

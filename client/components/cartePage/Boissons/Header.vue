@@ -34,7 +34,7 @@
     text-align: center;
   }
   .h2, .h1 {
-    font-family: "Mr Dafoe", sans-serif;
+    font-family: "Bradley Hand", sans-serif;
     color: #F9F6ED;
     text-shadow: 0px 4px 50px #7ED956;
   }

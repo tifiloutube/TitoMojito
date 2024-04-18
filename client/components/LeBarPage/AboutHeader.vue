@@ -29,7 +29,6 @@
 
 <style scoped>
 .h1 {
-  font-family: "Mr Dafoe", sans-serif;
   font-size: clamp(80px ,8vw,150px);
   letter-spacing: 0.08em;
   text-shadow: 0px 4px 50px var(--tertiary-color);
@@ -71,7 +70,7 @@ aside {
 }
 .info p:nth-child(1) {
   color: #f9f6ed;
-  font-family: "Lexend Tera", sans-serif;
+  font-family: "Bradley Hand", sans-serif;
   font-size: 50px;
   font-style: normal;
   font-weight: 400;
@@ -80,8 +79,8 @@ aside {
 
 .info p:nth-child(2) {
   color: #f9f6ed;
-  font-family: "Lexend Tera", sans-serif;
-  font-size: 25px;
+  font-family: "Bradley Hand", sans-serif;
+  font-size: 45px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;

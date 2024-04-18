@@ -76,7 +76,8 @@ li {
     }
     .list-boissons_nom_prix {
       ol {
-        font-size: 17px;
+        font-family: "Bradley Hand", sans-serif;
+        font-size: 28px;
       }
     }
   }

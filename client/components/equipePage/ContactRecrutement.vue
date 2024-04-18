@@ -71,6 +71,8 @@ onUnmounted(() => {
     font-size: clamp(30px, 6vw, 55px);
   }
   a {
+    font-family: "Bradley Hand", sans-serif;
+    font-size: 35px;
     color:  #2B2B2B;
     text-decoration: underline #2B2B2B;
   }

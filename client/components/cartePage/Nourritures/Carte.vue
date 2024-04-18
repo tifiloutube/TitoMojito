@@ -120,7 +120,8 @@ li {
     .list-nourritures_nom_prix {
       position: relative;
       ol {
-        font-size: 17px;
+        font-size: 28px;
+        font-family: "Bradley Hand", sans-serif;
       }
       .imageHover {
         position: absolute;

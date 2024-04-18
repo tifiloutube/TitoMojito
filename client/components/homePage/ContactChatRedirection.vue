@@ -88,9 +88,6 @@ onUnmounted(() => {
   flex-direction: column;
   width: 100%;
   align-items: center;
-  a {
-    width: 250px;
-  }
 }
 
 .h2 {

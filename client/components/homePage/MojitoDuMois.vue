@@ -63,41 +63,44 @@ onMounted(
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     height: 100vh;
     width: 100vw;
+  }
+  img {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
   }
 }
 
 .h2 {
   text-align: center;
-  margin-bottom: 45px;
   color: #2B2B2B;
-  font-family: "Mr Dafoe", sans-serif;
+  font-family: "Bradley Hand", sans-serif;
   font-size: clamp(45px, 10vw, 120px);
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
 .saveur {
-  letter-spacing: -0.08em;
+  width: 100%;
+  letter-spacing: -0.20em;
   color: transparent;
   text-align: center;
   font-family: "Lexend Tera", sans-serif;
   font-size: clamp(60px, 15vw, 180px);
   font-style: normal;
-  font-weight: 700;
+  font-weight: 300;
   line-height: normal;
   background-size: cover;
   background-position: center;
   background-clip: text;
   --webkit-background-clip: text;
-  margin-bottom: -180px;
 }
 .localisation {
   color: #2b2b2b;
   text-align: center;
-  font-family: "Lexend Tera", sans-serif;
+  font-family: "Bradley Hand", sans-serif;
   font-size: clamp(35px, 3vw, 35px);
   font-style: normal;
   font-weight: 700;

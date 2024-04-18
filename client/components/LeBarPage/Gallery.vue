@@ -182,7 +182,6 @@ onUnmounted(() => {
 .h2 {
   grid-column: 1/13;
   color: #F9F6ED;
-  font-family: "Mr Dafoe", sans-serif;
   font-size: clamp(50px, 8vw, 120px);
   font-style: normal;
   font-weight: 400;

@@ -27,7 +27,6 @@
 <style scoped>
 .h2 {
   color: #2B2B2B;
-  font-family: "Mr Dafoe", sans-serif;
   font-size: clamp(70px, 8vw, 100px);
   font-style: normal;
   font-weight: 400;

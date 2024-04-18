@@ -98,7 +98,9 @@ img {
   object-fit: cover;
   grid-column: 10/13;
 }
-
+.h4 {
+  font-size: 50px;
+}
 @media screen and (max-width: 900px) {
   .member-info {
     grid-column: 1/7;

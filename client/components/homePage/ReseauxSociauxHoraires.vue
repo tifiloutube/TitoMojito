@@ -198,7 +198,7 @@ onMounted(() => {
 <style scoped>
 .h3 {
   color: #2B2B2B;
-  font-family: "Mr Dafoe", sans-serif;
+  font-family: "Bradley Hand", sans-serif;
   font-size: clamp(45px, 8vw, 80px);
   font-style: normal;
   font-weight: 400;
