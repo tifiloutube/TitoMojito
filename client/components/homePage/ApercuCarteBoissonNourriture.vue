@@ -34,8 +34,7 @@ const cartes = [
   grid-column: 1/13;
   text-align: center;
   color: #2B2B2B;
-  font-family: "Bradley Hand", sans-serif;
-  font-size: clamp(45px, 8vw, 100px);
+  font-size: clamp(35px, 8vw, 80px);
   font-style: normal;
   font-weight: 400;
   line-height: normal;

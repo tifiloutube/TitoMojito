@@ -54,7 +54,7 @@ onMounted(
 .h2 {
   grid-column: 1 / 13;
   color: #2B2B2B;
-  font-size: clamp(70px , 8vw , 120px);
+  font-size: clamp(35px , 8vw , 80px);
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -95,14 +95,14 @@ onMounted(
 img {
   width: 100%;
   height: auto;
-  max-height: 600px;
+  max-height: 435px;
   border-radius: 20px;
   object-fit: cover;
   grid-column: 10/13;
 }
 
 .h4 {
-  font-size: 50px;
+  font-size: 25px;
 }
 @media screen and (max-width: 900px) {
   .founder-info {

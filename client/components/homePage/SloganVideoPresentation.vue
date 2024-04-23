@@ -4,8 +4,10 @@
 
 <template>
   <section class="container">
-    <h2 class="h2">Des mojitos à petits prix pour toute la vie</h2>
-    <article>
+    <article class="wrapper">
+      <h2 class="h2">Des mojitos à petits prix pour toute la vie</h2>
+    </article>
+    <article class="wrapper-video">
       <video class="video" src="/videos/videoTitoMojito.webm" autoplay loop muted playsinline></video>
       <div class="container-video">
         <p>Bienvenue chez <span>titomojito</span>, votre destination incontournable à Toulouse pour un art de <span>"mojiter"</span> unique à partir 3.90€!</p>
@@ -18,25 +20,19 @@
 </template>
 
 <style scoped>
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
-  .video {
-    height: 50vh;
-  }
-}
-
 .container {
   margin-top: 100px;
 }
 .h2 {
+  grid-column: 1/13;
   text-align: center;
   color: #2B2B2B;
-  font-family: "Bradley Hand", sans-serif;
-  font-size: clamp(45px, 8vw, 100px);
+  font-size: clamp(30px, 8vw, 80px);
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
-article {
+.wrapper-video {
   position: relative;
   margin-top: 80px;
   display: flex;
@@ -79,7 +75,7 @@ span {
 
 @media screen and (max-width: 900px) {
   .container {
-    margin-top: 300px;
+    /*margin-top: 300px;*/
   }
   video {
     height: 50vh;

@@ -26,7 +26,7 @@
     width: 100vw;
     height: 100vh;
     object-fit: cover;
-    border-radius: 20px;
+    border-radius: 0 0 10px 10px;
     position: relative;
   }
   .title {
@@ -34,7 +34,6 @@
     text-align: center;
   }
   .h2, .h1 {
-    font-family: "Bradley Hand", sans-serif;
     color: #F9F6ED;
     text-shadow: 0px 4px 50px #7ED956;
   }

@@ -8,7 +8,7 @@
       <img src="/images/carte/carteNourriture.webp" alt="image de background représentant des tapas">
       <div class="title">
         <h1 class="h1">LA CARTE</h1>
-        <h2 class="h2">Nourritures</h2>
+        <h2 class="h2">Tapas</h2>
       </div>
     </article>
   </section>
@@ -17,7 +17,7 @@
 <style scoped>
 .container {
   width: 100vw;
-  border-radius: 20px;
+  border-radius: 0 0 10px 10px;
   position: relative;
   display: flex;
   justify-content: center;

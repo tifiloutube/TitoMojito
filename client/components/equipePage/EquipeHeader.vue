@@ -13,8 +13,7 @@
 
 <style scoped>
 .container {
-  background-color: #2b2b2b;
-  border-radius: 20px;
+  border-radius: 0 0 10px 10px;
 }
 .h1 {
   font-size: clamp(80px ,8vw,150px);
@@ -27,6 +26,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  img {
+    border-radius: 0 0 10px 10px;
+  }
 }
 .backgroundImage {
   width: 100%;

@@ -91,7 +91,7 @@ onUnmounted(() => {
 
 .h2 {
   color: #F1ECE8;
-  font-size: clamp(20px, 4vw, 50px);
+  font-size: clamp(20px, 4vw, 45px);
 }
 .button {
   margin-top: 10px;

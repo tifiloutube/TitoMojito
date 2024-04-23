@@ -182,7 +182,7 @@ onUnmounted(() => {
 .h2 {
   grid-column: 1/13;
   color: #F9F6ED;
-  font-size: clamp(50px, 8vw, 120px);
+  font-size: clamp(35px , 8vw , 80px);
   font-style: normal;
   font-weight: 400;
   line-height: normal;

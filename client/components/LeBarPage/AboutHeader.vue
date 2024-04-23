@@ -15,7 +15,7 @@
           <p>Le nombre de bars</p>
         </div>
         <div class="info mojito">
-          <p>3.90</p>
+          <p>3.90€ *</p>
           <p>Le prix du mojito</p>
           <p>*virgin</p>
         </div>
@@ -36,7 +36,7 @@
 }
 .container {
   background-color: #2b2b2b;
-  border-radius: 20px;
+  border-radius: 0 0 10px 10px;
 }
 .containerTitle {
   position: relative;
@@ -48,8 +48,8 @@
 .backgroundImage {
   width: 100%;
   height: 100vh;
+  border-radius: 0 0 10px 10px;
   object-fit: cover;
-  border-radius: 20px;
 }
 .h1 {
   position: absolute;

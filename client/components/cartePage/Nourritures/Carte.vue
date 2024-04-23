@@ -1,5 +1,5 @@
 <script setup lang="js">
-import { onMounted, ref, reactive, nextTick } from 'vue';
+import { onMounted, onUnmounted, ref, reactive, nextTick } from 'vue';
 import { gsap } from 'gsap';
 
 const carteNourriture = ref([]);
@@ -17,6 +17,7 @@ async function loadCarteNourriture() {
 
     const data = await response.json();
     carteNourriture.value = data.acf_fields.carte_nourriture;
+    updateOpenStates(window.innerWidth);
   } catch (error) {
     console.error("Erreur lors de la requête fetch:", error);
   }
@@ -63,8 +64,24 @@ function initHoverAnimation() {
   });
 }
 
+function updateOpenStates(width) {
+  const isOpenByDefault = width > 900;
+  carteNourriture.value.forEach((_, index) => {
+    openStates[index] = isOpenByDefault;
+  });
+}
+
+function handleResize() {
+  updateOpenStates(window.innerWidth);
+}
+
 onMounted(() => {
   loadCarteNourriture().then(initHoverAnimation);
+  window.addEventListener('resize', handleResize);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('resize', handleResize);
 });
 </script>
 
