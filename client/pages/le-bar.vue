@@ -12,8 +12,8 @@ useHead({
 
 <template>
   <AboutHeader />
-  <Founders />
   <Concept />
+  <Founders />
   <ClientOnly>
     <Gallery />
   </ClientOnly>

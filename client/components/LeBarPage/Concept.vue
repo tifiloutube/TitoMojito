@@ -25,6 +25,9 @@
 </template>
 
 <style scoped>
+.wrapper {
+  margin-top: 50px;
+}
 .h2 {
   color: #2B2B2B;
   font-size: clamp(35px , 8vw , 80px);
