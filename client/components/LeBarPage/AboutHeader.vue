@@ -15,8 +15,8 @@
           <p>Le nombre de bars</p>
         </div>
         <div class="info mojito">
-          <p>3.90€ *</p>
-          <p>Le prix du mojito</p>
+          <p>3.90€</p>
+          <p>Le prix du mojito*</p>
           <p>*virgin</p>
         </div>
         <div class="info">

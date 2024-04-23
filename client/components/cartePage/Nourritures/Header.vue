@@ -26,7 +26,7 @@
     width: 100vw;
     height: 100vh;
     object-fit: cover;
-    border-radius: 20px;
+    border-radius: 0 0 10px 10px;
     position: relative;
   }
   .title {
