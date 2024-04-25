@@ -481,11 +481,11 @@ onUnmounted(() => {
         cursor: pointer;
         border: none;
         background: none;
-        font-size: 33px;
+        font-size: 20px;
         grid-column: 1/2;
         margin: auto;
         color: #f9f6ed;
-        font-family: "Bradley Hand", sans-serif;
+        font-family: "Lexend Tera", sans-serif;
       }
       :nth-child(3) {
         grid-column: 3/4;
@@ -495,8 +495,9 @@ onUnmounted(() => {
         grid-column: 5/6;
         margin: auto;
         color: #f9f6ed;
-        font-family: "Bradley Hand", sans-serif;
-        font-size: 33px;
+        font-family: "Lexend Tera", sans-serif;
+        font-size: 20px;
+        font-weight: 300;
       }
       .separator {
         height: 100%;
@@ -529,16 +530,17 @@ onUnmounted(() => {
     padding-right: 25px;
     li {
       cursor: pointer;
-      font-family: "Mr Dafoe", sans-serif;
+      font-family: "Lexend Tera", sans-serif;
       color: #f9f6ed !important;
       font-size: 40px;
       list-style: none;
+      font-weight: 300;
       margin: auto;
       width: 100%;
       border-bottom: 1px solid #f9f6ed;
       a {
         color: #f9f6ed;
-        font-family: "Bradley Hand", sans-serif;
+        font-family: "Lexend Tera", sans-serif;
         transition: ease 0.2s;
       }
     }
