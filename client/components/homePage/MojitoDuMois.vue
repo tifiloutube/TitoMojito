@@ -56,8 +56,10 @@ onMounted(
   gap: 60px;
 }
 .mojitoDuMois {
+  display: flex;
+  flex-direction: column;
+  gap: 300px;
   .saveurMojito {
-    margin-bottom: 100px;
     border-radius: 20px 20px 0px 0px;
     position: sticky;
     top: 0;
