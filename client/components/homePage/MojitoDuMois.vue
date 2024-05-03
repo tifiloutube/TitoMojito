@@ -60,6 +60,7 @@ onMounted(
   flex-direction: column;
   gap: 300px;
   .saveurMojito {
+    padding-top: 20px;
     border-radius: 20px 20px 0px 0px;
     position: sticky;
     top: 0;
