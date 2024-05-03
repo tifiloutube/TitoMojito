@@ -92,7 +92,7 @@ footer {
   font-family: "Lexend Tera", sans-serif;
   font-size: 25px;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   line-height: normal;
   p {
     font-size: 20px;

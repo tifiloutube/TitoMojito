@@ -40,7 +40,7 @@
   img {
     width: 100%;
     height: 485px;
-    border-radius: 20px;
+    border-radius: 10px;
     object-fit: cover;
   }
 }

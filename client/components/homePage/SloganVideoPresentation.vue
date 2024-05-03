@@ -45,7 +45,7 @@ video {
   object-fit: cover;
   height: 70vh;
   min-width: 100%;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 .container-video {
   z-index: 1;

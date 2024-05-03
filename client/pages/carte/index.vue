@@ -49,7 +49,7 @@ useHead({
   img {
     width: 100%;
     height: 555px;
-    border-radius: 20px;
+    border-radius: 10px;
     object-fit: cover;
     transition: filter 0.3s;
     filter: blur(2px);

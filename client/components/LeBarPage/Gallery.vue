@@ -174,7 +174,7 @@ onUnmounted(() => {
 <style scoped>
 .container {
   margin-top: 130px;
-  border-radius: 20px;
+  border-radius: 10px;
   background: #2B2B2B;
   padding-top: 30px;
   padding-bottom: 300px;

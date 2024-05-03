@@ -17,7 +17,7 @@ const routeName = computed(() => {
     case '/le-bar': return 'Le bar';
     case '/equipe': return 'L’équipe';
     case '/carte': return 'Les cartes';
-    case '/carte/nourriture': return 'Nourritures';
+    case '/carte/nourriture': return 'Tapas';
     case '/carte/boissons': return 'Boissons';
     default: return 'Page Inconnue';
   }

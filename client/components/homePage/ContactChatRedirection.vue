@@ -76,7 +76,7 @@ onUnmounted(() => {
 .background {
   width: 100vw;
   object-fit: cover;
-  border-radius: 20px 20px 0px 0px;
+  border-radius: 10px 10px 0px 0px;
   max-height: 555px;
 }
 

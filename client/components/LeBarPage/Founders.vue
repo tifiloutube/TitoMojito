@@ -96,7 +96,7 @@ img {
   width: 100%;
   height: auto;
   max-height: 435px;
-  border-radius: 20px;
+  border-radius: 10px;
   object-fit: cover;
   grid-column: 10/13;
 }
