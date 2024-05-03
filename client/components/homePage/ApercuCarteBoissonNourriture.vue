@@ -78,5 +78,8 @@ button {
       height: 300px;
     }
   }
+  .button {
+    font-size: 25px;
+  }
 }
 </style>

@@ -115,6 +115,12 @@ onMounted(
   .saveur {
     margin-bottom: -50px;
   }
+  .mojitoDuMois {
+    gap: 0px;
+  }
+  .saveurMojito {
+    height: 50vh !important;
+  }
 }
 
 </style>
