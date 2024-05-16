@@ -41,9 +41,11 @@ onMounted(
   <section class="container">
     <article class="mojitoDuMois">
       <div v-for="(mojito, index) in mojitosDuMois" :key="index" class="saveurMojito" :style="{ backgroundImage: `url(${mojito.imageBackground})`, background: `linear-gradient(180deg, #F9F6ED 0%, ${mojito.couleurGradient} 33%, ${mojito.couleurGradient} 100%)` }">
-        <h2 class="h2">{{ mojito.lieu }}</h2>
-        <h3 class="localisation">La saveurs du mois</h3>
-        <h2 class="saveur" :style="{ backgroundImage: `url(${mojito.imageBackground})` }">{{ mojito.saveur }}</h2>
+        <div class="info">
+          <h2 class="h2">{{ mojito.lieu }}</h2>
+          <h3 class="localisation">La saveurs du mois</h3>
+          <h2 class="saveur" :style="{ backgroundImage: `url(${mojito.imageBackground})` }">{{ mojito.saveur }}</h2>
+        </div>
         <img :src="mojito.imageMojito" alt="Image de Mojito">
       </div>
     </article>
@@ -110,18 +112,23 @@ onMounted(
 }
 
 @media  screen and (max-width: 900px) {
-  img {
-    width: 50%;
-  }
   .saveur {
     margin-bottom: -50px;
   }
   .mojitoDuMois {
     gap: 0px;
   }
-  .saveurMojito {
-    height: 50vh !important;
+  .info {
+    margin-top: 65px;
   }
 }
 
+@media  screen and (max-width: 500px) {
+  img {
+    display: none;
+  }
+  .info {
+    margin: auto;
+  }
+}
 </style>

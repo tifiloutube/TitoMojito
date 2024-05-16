@@ -8,7 +8,7 @@ const showMenuItems = ref(false);
 const menuList = ref(null);
 const isNavVisible = ref(null);
 const navElement = ref(null);
-const menuFullyOpened = ref(false);  // Ajout d'un indicateur pour le menu complètement ouvert
+const menuFullyOpened = ref(false);
 const route = useRoute();
 
 const routeName = computed(() => {
@@ -568,6 +568,9 @@ onUnmounted(() => {
       display: flex;
       flex-direction: column;
       text-align: center;
+      li {
+        font-size: 20px;
+      }
     }
   }
   @media screen and (max-width: 600px) {

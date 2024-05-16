@@ -44,7 +44,7 @@ onMounted(() => {
     <section class="">
       <div class="container-title" id="container-title">
         <h1 class="h1HomePage title">
-          <svg width="889" height="594" viewBox="0 0 889 594" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 0 889 594" fill="none" xmlns="http://www.w3.org/2000/svg">
             <mask id="mask0_182_18" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="146" y="412" width="574" height="183">
               <path d="M719.47 412.063H146.614V594H719.47V412.063Z" fill="white"/>
             </mask>
@@ -341,17 +341,6 @@ onMounted(() => {
           </svg>
         </h1>
         <img src="public/background.jpg" alt="image de l'intérieur du bar titomojito" class="imageTitle">
-        <!--
-        <div class="floating-container">
-          <img src="/images/floatImage/glacon.png" alt="" class="floating-element floating-element-anim">
-          <img src="/images/floatImage/glacon.png" alt="" class="floating-element floating-element-anim">
-          <img src="/images/floatImage/menthe.png" alt="" class="floating-element floating-element-anim">
-          <img src="/images/floatImage/menthe.png" alt="" class="floating-element floating-element-anim">
-          <img src="/images/floatImage/citron.png" alt="" class="floating-element floating-element-anim">
-          <img src="/images/floatImage/citron.png" alt="" class="floating-element floating-element-anim">
-        </div>
-        <img src="/images/floatImage/4mojitos.png" alt="" class="floating-element_mojito floating-element-anim">
-        -->
       </div>
     </section>
   </main>
@@ -377,13 +366,17 @@ onMounted(() => {
 }
 
 .title {
-  /*font-size: clamp(50px, 7vw, 90px);*/
   position: absolute;
   z-index: 10;
   color: white;
   text-align: center;
   opacity: 0;
-  /*margin-top: -200px;*/
+  width: 80vw;
+  height: 80vh;
+  svg {
+    height: 100%;
+    width: 100%;
+  }
 }
 
 .floating-container {
@@ -449,38 +442,11 @@ onMounted(() => {
   right: 115px;
 }
 
-.floating-element_mojito {
-  position: absolute;
-  width: 584px;
-  height: 584px;
-  top: 603px;
-  opacity: 0;
-}
-
-@media screen and (max-width: 1024px) {
-  .floating-container {
-    display: none;
-  }
-  .container-title {
-    height: 500px;
-    .imageTitle {
-      height: 500px;
-    }
-  }
-  svg {
-    width: 100%;
-  }
-  .floating-element_mojito {
-    width: 500px;
-    height: 500px;
-  }
+svg {
+  width: 100%;
 }
 
 @media  screen and (max-width: 900px) {
-  .floating-element_mojito {
-    margin-top: -50px;
-    width: 370px;
-    height: 370px;
-  }
+
 }
 </style>
