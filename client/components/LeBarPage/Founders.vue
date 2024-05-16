@@ -111,5 +111,8 @@ img {
   img {
     grid-column: 7/13;
   }
+  .h4 {
+    font-size: 20px;
+  }
 }
 </style>

@@ -269,6 +269,8 @@ onUnmounted(() => {
 }
 
 @media (max-width: 900px) {
-
+  .container {
+    margin-top: 0;
+  }
 }
 </style>
