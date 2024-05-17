@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <NuxtLayout>
     <Menu />
     <NuxtPage />
     <Footer />
-  </div>
+  </NuxtLayout>
 </template>
 <script setup lang="ts">
 import Footer from "~/components/Shared/Footer.vue";
