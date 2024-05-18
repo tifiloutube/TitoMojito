@@ -45,7 +45,7 @@ onUnmounted(() => {
 <template>
   <section class="container" :style="{ clipPath: clipPathValue }">
     <article class="containerImage">
-      <img src="/images/backgrounds/backgroundContact.webp" alt="" class="background">
+      <img src="/images/backgrounds/backgroundContact.jpg" alt="background" class="background">
       <div class="contact">
         <h2 class="h2">UNE ENVIE ? UN DESIR ? UNE QUESTION ?</h2>
         <a class="button" href="mailto:info@titomojito.fr?subject=Candidature">Contactez-nous</a>

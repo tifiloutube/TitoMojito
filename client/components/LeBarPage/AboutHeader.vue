@@ -6,7 +6,7 @@
   <section>
     <article class="container">
       <div class="containerTitle">
-        <img src="/images/backgrounds/backgroundContact.webp" alt="" class="backgroundImage">
+        <img src="/images/backgrounds/backgroundBar.jpg" alt="background bar" class="backgroundImage">
         <h1 class="h1">LE BAR</h1>
       </div>
       <aside>
