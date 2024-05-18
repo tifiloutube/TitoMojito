@@ -76,6 +76,7 @@ onMounted(
     position: absolute;
     z-index: -1;
     bottom: 0;
+    max-width: 500px;
   }
 }
 
