@@ -191,6 +191,9 @@ NuxtLink {
 }
 
 @media screen and (max-width: 900px) {
+  footer {
+    margin-top: 0;
+  }
   .desktop {
     display: none;
   }
