@@ -35,7 +35,7 @@ function calculateScrollValue(percentage) {
 function handleScroll() {
   const scrollPosition = window.scrollY;
 
-  const startPercentage = 82;
+  const startPercentage = 95;
   const endPercentage = 100;
 
   const startScroll = calculateScrollValue(startPercentage);
