@@ -77,7 +77,7 @@
         </li>
       </ul>
     </div>
-    <p class="copyright">Copyright © 2024 par TitoMojito. Tous droits réservés. Developpement & Design credits : <a class="linkdev" href="https://vilarinho-philippe.netlify.app/" target="_blank"> Philippe VILARINHO</a> </p>
+    <p class="copyright">Copyright © 2024 par TitoMojito. Tous droits réservés. Developpement & Design credits : <a class="linkdev" href="https://philippe-vilarinho.vercel.app/" target="_blank"> Philippe VILARINHO</a> </p>
   </footer>
 </template>
 
