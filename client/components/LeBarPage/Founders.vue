@@ -95,7 +95,7 @@ onMounted(
 img {
   width: 100%;
   height: auto;
-  max-height: 435px;
+  max-height: 600px;
   border-radius: 10px;
   object-fit: cover;
   grid-column: 10/13;
