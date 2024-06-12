@@ -12,7 +12,7 @@ async function loadFounders() {
       throw new Error('Erreur lors de la récupération des données')
     }
     const data = await response.json();
-    founders.value = data.acf_fields.membre_du_staff;
+    founders.value = data.acf_fields.createurs;
   } catch (error) {
     console.error("Erreur lors de la requête fetch:", error)
   }
@@ -36,7 +36,7 @@ onMounted(
                 <p>{{ founder.description }}</p>
                 <h4 class="h4">{{ founder.poste }}</h4>
               </div>
-              <img :src="founder.photo_du_membre.url" :alt="`Photo de ${founder.nom}`">
+              <img :src="founder.photo_du_createur.url" :alt="`Photo de ${founder.nom}`">
             </div>
           </div>
         </li>
