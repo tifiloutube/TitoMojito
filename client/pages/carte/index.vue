@@ -41,6 +41,8 @@ useHead({
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
   .container-name {
     position: absolute;
@@ -70,7 +72,6 @@ useHead({
 
 @media screen and (max-width: 900px) {
   .wrapper {
-    margin-top: 50px;
     display: flex;
     flex-direction: column;
     .container {
