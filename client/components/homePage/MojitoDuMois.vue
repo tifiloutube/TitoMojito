@@ -60,22 +60,18 @@ onMounted(
 .mojitoDuMois {
   display: flex;
   flex-direction: column;
-  gap: 300px;
   .saveurMojito {
     padding-top: 20px;
     border-radius: 20px 20px 0px 0px;
-    position: sticky;
+    position: relative;
     top: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
   }
   img {
-    position: absolute;
-    z-index: -1;
-    bottom: 0;
     max-width: 500px;
   }
 }

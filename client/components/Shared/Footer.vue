@@ -33,6 +33,9 @@
           <a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x12aebbf86ffe08b1:0xe3ada0abbbee574c?sa=X&ved=1t:8290&ictx=111" style="text-decoration: none; color: #2B2B2B;" target="_blank">40 Rue Jean-Baptiste Merly, 31000 Toulouse</a>
         </li>
         <li>
+          <a href="https://www.google.com/maps/dir//51+All.+Jean+Jaur%C3%A8s,+31000+Toulouse/@43.6078678,1.3688278,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x12aebd3407e919cd:0xf35ba9bf36667fe4!2m2!1d1.4512285!2d43.6078974?entry=ttu" style="text-decoration: none; color: #2B2B2B;" target="_blank">51 All. Jean Jaurès, 31000 Toulouse</a>
+        </li>
+        <li>
           <a href="mailto:info@titomojito.fr" style="text-decoration: none; color: #2B2B2B; word-break: break-word;">info@titomojito.fr</a>
         </li>
       </ul>
@@ -71,6 +74,9 @@
       <ul class="contact">
         <li>
           <a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x12aebbf86ffe08b1:0xe3ada0abbbee574c?sa=X&ved=1t:8290&ictx=111" style="text-decoration: none; color: #2B2B2B;" target="_blank">40 Rue Jean-Baptiste Merly, 31000 Toulouse</a>
+        </li>
+        <li>
+          <a href="https://www.google.com/maps/dir//51+All.+Jean+Jaur%C3%A8s,+31000+Toulouse/@43.6078678,1.3688278,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x12aebd3407e919cd:0xf35ba9bf36667fe4!2m2!1d1.4512285!2d43.6078974?entry=ttu" style="text-decoration: none; color: #2B2B2B;" target="_blank">51 All. Jean Jaurès, 31000 Toulouse</a>
         </li>
         <li>
           <a href="mailto:info@titomojito.fr" style="text-decoration: none; color: #2B2B2B; word-break: break-word;">info@titomojito.fr</a>
