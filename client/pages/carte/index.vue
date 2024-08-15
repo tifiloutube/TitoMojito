@@ -70,6 +70,7 @@ useHead({
 
 @media screen and (max-width: 900px) {
   .wrapper {
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     .container {
