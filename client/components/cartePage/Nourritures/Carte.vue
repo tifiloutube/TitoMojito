@@ -27,41 +27,95 @@ function toggle(index) {
   openStates[index] = !openStates[index];
 }
 
-function initHoverAnimation() {
-  nextTick(() => {
+function initAnimation() {
+  function applyAnimation() {
+    if (window.innerWidth < 900) {
+      console.log("click actif"); // Indique que le mode click est actif
+      removeAnimation(); // Supprime les animations précédentes s'il y en a
+      nextTick(() => {
+        const listItems = document.querySelectorAll('.list-nourritures_nom_prix');
+
+        listItems.forEach(item => {
+          item.addEventListener('click', handleClick);
+        });
+      });
+    } else {
+      console.log("hover actif"); // Indique que le mode hover est actif
+      removeAnimation(); // Supprime les animations précédentes s'il y en a
+      nextTick(() => {
+        const listItems = document.querySelectorAll('.list-nourritures_nom_prix');
+
+        listItems.forEach(item => {
+          item.addEventListener('mouseenter', handleMouseEnter);
+          item.addEventListener('mouseleave', handleMouseLeave);
+        });
+      });
+    }
+  }
+
+  function handleClick(e) {
+    const item = e.currentTarget;
+    const image = item.querySelector('.imageHover');
+    const isVisible = gsap.getProperty(image, "autoAlpha") === 1;
+
+    if (isVisible) {
+      gsap.to(image, { autoAlpha: 0, duration: 0.3 });
+    } else {
+      gsap.to(image, { autoAlpha: 1, duration: 0.3 });
+    }
+  }
+
+  function handleMouseEnter(e) {
+    const item = e.currentTarget;
+    const image = item.querySelector('.imageHover');
+
+    gsap.to(image, { autoAlpha: 1, duration: 0.3 });
+
+    function moveImage(e) {
+      const rect = item.getBoundingClientRect();
+
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      const newX = x + 10;
+      const newY = y - 170;
+
+      gsap.set(image, {
+        x: newX,
+        y: newY,
+        position: 'absolute'
+      });
+    }
+
+    item.addEventListener('mousemove', moveImage);
+
+    item.addEventListener('mouseleave', () => {
+      gsap.to(image, { autoAlpha: 0, duration: 0.3 });
+      item.removeEventListener('mousemove', moveImage);
+    });
+  }
+
+  function handleMouseLeave(e) {
+    const item = e.currentTarget;
+    const image = item.querySelector('.imageHover');
+    gsap.to(image, { autoAlpha: 0, duration: 0.3 });
+  }
+
+  function removeAnimation() {
     const listItems = document.querySelectorAll('.list-nourritures_nom_prix');
 
     listItems.forEach(item => {
-      item.addEventListener('mouseenter', function(e) {
-        const image = item.querySelector('.imageHover');
-
-        gsap.to(image, { autoAlpha: 1, duration: 0.3 });
-
-        function moveImage(e) {
-          const rect = item.getBoundingClientRect();
-
-          const x = e.clientX - rect.left;
-          const y = e.clientY - rect.top;
-
-          const newX = x + 10;
-          const newY = y -170;
-
-          gsap.set(image, {
-            x: newX,
-            y: newY,
-            position: 'absolute'
-          });
-        }
-
-        item.addEventListener('mousemove', moveImage);
-
-        item.addEventListener('mouseleave', () => {
-          gsap.to(image, { autoAlpha: 0, duration: 0.3 });
-          item.removeEventListener('mousemove', moveImage);
-        });
-      });
+      item.removeEventListener('click', handleClick);
+      item.removeEventListener('mouseenter', handleMouseEnter);
+      item.removeEventListener('mouseleave', handleMouseLeave);
     });
-  });
+  }
+
+  // Appliquer l'animation au chargement initial
+  applyAnimation();
+
+  // Mettre à jour l'animation au redimensionnement de la fenêtre
+  window.addEventListener('resize', applyAnimation);
 }
 
 function updateOpenStates(width) {
@@ -76,12 +130,13 @@ function handleResize() {
 }
 
 onMounted(() => {
-  loadCarteNourriture().then(initHoverAnimation);
+  loadCarteNourriture().then(initAnimation);
   window.addEventListener('resize', handleResize);
 });
 
 onUnmounted(() => {
   window.removeEventListener('resize', handleResize);
+  window.removeEventListener('resize', initAnimation); // Retirer le listener pour initAnimation
 });
 </script>
 
@@ -101,7 +156,7 @@ onUnmounted(() => {
             </defs>
           </svg>
         </div>
-        <li v-show="openStates[index]" v-for="(nourriture, indexN) in categorie.nourritures.la_nourriture" :key="'nourriture-' + indexN" class="list-nourritures_nom_prix">
+        <li v-show="openStates[index]" v-for="(nourriture, indexN) in categorie.nourritures.la_nourriture" :key="'nourriture-' + indexN" class="list-nourritures_nom_prix nourritureDesktop">
           <div>
             <ol>{{ nourriture.nom_de_la_nourriture }}</ol>
             <ol class="composition">{{ nourriture.composition_de_la_nourriture }}</ol>

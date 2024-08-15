@@ -30,8 +30,8 @@ const activeLinkClass = computed(() => {
 </script>
 
 <template>
-  <nav :class="{ 'open': isOpen }">
-    <p @click="toggleMenu">{{ isOpen ? 'fermer' : 'menu' }}</p>
+  <nav :class="{ 'open': isOpen }" class="menuDesktop">
+    <p @click="toggleMenu" :class="{ 'align-end': isOpen }">{{ isOpen ? 'fermer' : 'menu' }}</p>
     <ul v-show="isOpen">
       <li :class="activeLinkClass['/']">
         <NuxtLink to="/" @click="toggleMenu">Accueil</NuxtLink>
@@ -70,10 +70,14 @@ nav {
 }
 
 p {
-  text-align: end;
+  text-align: center; /* Texte centré par défaut */
   padding: 10px 30px;
   cursor: pointer; /* Style pour indiquer que l'élément est cliquable */
-  transition: color 0.3s ease; /* Transition pour la couleur du texte */
+  transition: color 0.3s ease, text-align 0.3s ease; /* Transition pour la couleur du texte et l'alignement */
+}
+
+.align-end {
+  text-align: end; /* Aligne le texte à droite */
 }
 
 ul {
@@ -94,5 +98,11 @@ li a:hover {
 
 .active-link a {
   color: #7ed956; /* Couleur pour l'élément actif */
+}
+
+@media screen and (max-width: 900px) {
+  .open {
+    width: calc(100vw - 20px);
+  }
 }
 </style>
