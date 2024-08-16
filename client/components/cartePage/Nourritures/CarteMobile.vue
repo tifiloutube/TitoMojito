@@ -35,13 +35,15 @@ function toggle(index) {
 function toggleImage(index, indexN, forceClose = false) {
   const key = `${index}-${indexN}`;
 
-  if (forceClose) {
-    // Si forceClose est true, fermer simplement l'image spécifiée
-    imageVisibility[key] = false;
-  } else {
-    // Basculer la visibilité de l'image cliquée
-    imageVisibility[key] = !imageVisibility[key];
+  // Fermer toutes les autres images avant d'ouvrir celle-ci
+  for (const k in imageVisibility) {
+    if (k !== key) {
+      imageVisibility[k] = false;
+    }
   }
+
+  // Basculer la visibilité de l'image cliquée
+  imageVisibility[key] = !imageVisibility[key];
 }
 
 onMounted(() => {
