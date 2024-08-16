@@ -39,12 +39,6 @@ function toggleImage(index, indexN, forceClose = false) {
     // Si forceClose est true, fermer simplement l'image spécifiée
     imageVisibility[key] = false;
   } else {
-    // Fermer toutes les autres images avant d'ouvrir celle-ci
-    for (const k in imageVisibility) {
-      if (imageVisibility[k]) {
-        imageVisibility[k] = false;
-      }
-    }
     // Basculer la visibilité de l'image cliquée
     imageVisibility[key] = !imageVisibility[key];
   }
@@ -75,17 +69,15 @@ onMounted(() => {
         <li v-show="openStates[index]" v-for="(nourriture, indexN) in categorie.nourritures.la_nourriture" :key="'nourriture-' + indexN" class="list-nourritures_nom_prix">
           <div class="list-nourritures_container" @click="toggleImage(index, indexN)">
             <div>
-              <ol>{{ nourriture.nom_de_la_nourriture }}</ol>
-              <ol class="composition">{{ nourriture.composition_de_la_nourriture }}</ol>
+              <div>
+                <ol>{{ nourriture.nom_de_la_nourriture }}</ol>
+                <ol class="composition">{{ nourriture.composition_de_la_nourriture }}</ol>
+              </div>
+              <p class="boutonDeploiement">{{ imageVisibility[`${index}-${indexN}`] ? 'Voir moins' : 'Voir plus' }}</p>
             </div>
             <ol>{{ nourriture.prix_de_la_nourriture }}</ol>
           </div>
           <div :class="['image-container', { 'is-open': imageVisibility[`${index}-${indexN}`] }]">
-            <div class="close-button" @click.stop="toggleImage(index, indexN, true)">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-              </svg>
-            </div>
             <img :src="nourriture.photo_de_la_nourriture.url" alt="Photo de la nourriture" class="imageHover"/>
           </div>
         </li>
@@ -98,6 +90,11 @@ onMounted(() => {
 .h2 {
   display: flex;
   align-items: center;
+}
+
+.boutonDeploiement {
+  font-size: 11px;
+  text-decoration: underline;
 }
 
 ul {
