@@ -262,7 +262,7 @@ li {
   display: flex;
   gap: 20px;
   justify-content: space-between;
-  width: 70%;
+  width: 80%;
   margin-left: 82px;
 }
 .imageHover {
