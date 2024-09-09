@@ -124,6 +124,9 @@ useHead({
         padding: 5px 15px 5px 15px;
         min-width: 150px;
       }
+      .button {
+        font-size: 25px;
+      }
     }
   }
 }
