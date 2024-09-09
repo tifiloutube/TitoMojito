@@ -1,9 +1,49 @@
 <script setup lang="ts">
-const cartes = [
-  { type: 'nourriture', nom: 'À grignoter', image: '/images/carte/carteNourriture.jpeg', route: '/carte/nourriture' },
-  { type: 'boissons', nom: 'À mojiter', image: '/images/carte/backgroundContact.webp', route: '/carte/boissons' },
-];
+import { ref, onMounted } from 'vue'
 
+// Définir un type pour les cartes
+interface Carte {
+  type: string;
+  nom: string;
+  image: string; // Changer 'any' en 'string' car l'URL de l'image est une chaîne
+  route: string;
+}
+
+// Variable réactive pour stocker les cartes, typée avec l'interface Carte[]
+const cartes = ref<Carte[]>([])
+
+// Fonction pour appeler l'API et récupérer les images des cartes
+const fetchCartes = async () => {
+  try {
+    const response = await fetch('https://api.titomojito.fr/wp-json/wp/v2/posts/383')
+    const data = await response.json()
+
+    // Vérifier si les images des cartes existent et les stocker dans la variable 'cartes'
+    if (data.acf_fields && data.acf_fields.images_cartes) {
+      cartes.value = [
+        {
+          type: 'nourriture',
+          nom: 'On grignote quoi ?',
+          image: data.acf_fields.images_cartes.image_carte_tapas.url, // URL de l'image de la carte nourriture
+          route: '/carte/nourriture'
+        },
+        {
+          type: 'boissons',
+          nom: 'On mojite quoi ?',
+          image: data.acf_fields.images_cartes.image_carte_boissons.url, // URL de l'image de la carte boissons
+          route: '/carte/boissons'
+        }
+      ]
+    }
+  } catch (error) {
+    console.error('Erreur lors de la récupération des données :', error)
+  }
+}
+
+// Appeler la fonction lorsque le composant est monté
+onMounted(() => {
+  fetchCartes()
+})
 useHead({
   title: 'TitoMojito - Bar à mojitos'
 })
@@ -14,6 +54,7 @@ useHead({
     <h1 class="title">On commande quoi ?</h1>
     <article class="container" v-for="carte in cartes" :key="carte.type">
       <NuxtLink :to="carte.route" style="position: relative; width: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+        <!-- Utilisation de la variable réactive pour afficher les images des cartes -->
         <img :src="carte.image" :alt="`image carte ${carte.type}`">
         <button class="container-name button">
           {{ carte.nom }}

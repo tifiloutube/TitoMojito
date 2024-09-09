@@ -1,12 +1,35 @@
 <script setup lang="ts">
+import { ref, onMounted } from 'vue'
 
+// Création d'une variable réactive pour stocker l'URL de l'image
+const heroHeader = ref('')
+
+// Fonction pour appeler l'API et récupérer l'image
+const fetchHeroHeader = async () => {
+  try {
+    const response = await fetch('https://api.titomojito.fr/wp-json/wp/v2/posts/383')
+    const data = await response.json()
+
+    // Vérifier si l'image existe et récupérer son URL
+    if (data.acf_fields && data.acf_fields.image_le_bar) {
+      heroHeader.value = data.acf_fields.image_le_bar.url
+    }
+  } catch (error) {
+    console.error('Erreur lors de la récupération des données :', error)
+  }
+}
+
+// Appeler la fonction lorsque le composant est monté
+onMounted(() => {
+  fetchHeroHeader()
+})
 </script>
 
 <template>
   <section>
     <article class="container">
       <div class="containerTitle">
-        <img src="/images/backgrounds/backgroundBar.jpg" alt="background bar" class="backgroundImage">
+        <img :src="heroHeader" alt="background bar" class="backgroundImage">
         <h1 class="h1">LE BAR</h1>
       </div>
       <aside>
