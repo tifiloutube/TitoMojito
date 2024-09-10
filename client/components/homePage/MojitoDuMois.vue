@@ -60,16 +60,19 @@ onMounted(
 .mojitoDuMois {
   display: flex;
   flex-direction: column;
+  gap: 100vh;
   .saveurMojito {
     padding-top: 20px;
     border-radius: 20px 20px 0px 0px;
-    position: relative;
+    position: sticky;
     top: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
+    max-height: 100vh;
     width: 100vw;
+    overflow: hidden;
   }
   img {
     max-width: 500px;

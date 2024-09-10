@@ -11,8 +11,8 @@ const fetchHeroHeader = async () => {
     const data = await response.json()
 
     // Vérifier si l'image existe et récupérer son URL
-    if (data.acf_fields && data.acf_fields.image_lequipe) {
-      heroHeader.value = data.acf_fields.image_lequipe.url
+    if (data.acf_fields && data.acf_fields.image_chat) {
+      heroHeader.value = data.acf_fields.image_chat.url
     }
   } catch (error) {
     console.error('Erreur lors de la récupération des données :', error)
@@ -29,7 +29,7 @@ onMounted(() => {
   <Header class="container">
     <div class="containerTitle">
       <img :src="heroHeader" alt="staff du bar" class="backgroundImage">
-      <h1 class="h1">LE STAFF</h1>
+      <h1 class="h1">TitoChat</h1>
     </div>
   </Header>
 </template>

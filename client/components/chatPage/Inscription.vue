@@ -1,10 +1,11 @@
 <script setup lang="ts">
 
-import ChatHeader from "~/components/chatPage/ChatHeader.vue";
 </script>
 
 <template>
-  <ChatHeader />
+  <section>
+    
+  </section>
 </template>
 
 <style scoped>
