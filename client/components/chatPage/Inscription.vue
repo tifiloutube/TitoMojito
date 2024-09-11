@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 
 // Référence pour le prénom
 const prenom = ref<string>('');
@@ -14,7 +14,6 @@ const handlePhotoUpload = (event: Event) => {
   if (input.files && input.files[0]) {
     photo.value = input.files[0];
 
-    // Générer un aperçu de la photo
     const reader = new FileReader();
     reader.onload = () => {
       photoPreview.value = reader.result as string;
@@ -22,6 +21,11 @@ const handlePhotoUpload = (event: Event) => {
     reader.readAsDataURL(photo.value);
   }
 };
+
+// Computed property pour vérifier si les deux champs (prénom et photo) sont remplis
+const isFormValid = computed(() => {
+  return prenom.value.trim() !== '' && photo.value !== null;
+});
 </script>
 
 <template>
@@ -37,12 +41,19 @@ const handlePhotoUpload = (event: Event) => {
         />
       </div>
       <div class="photo">
-        <label for="photo">Photo de profil</label>
+        <label for="photo">Photo</label>
         <input type="file" id="photo" @change="handlePhotoUpload" accept="image/*" />
         <div v-if="photoPreview" class="photo-preview">
-          <img :src="photoPreview" alt="Aperçu de la photo" />
+          <img :src="photoPreview" alt="Aperçu de la photo" class="photoPreview" />
         </div>
       </div>
+      <button
+          class="chatButton"
+          :disabled="!isFormValid"
+          :class="{ active: isFormValid }"
+      >
+        Accéder au chat
+      </button>
     </div>
   </section>
 </template>
@@ -53,7 +64,9 @@ const handlePhotoUpload = (event: Event) => {
 }
 
 .utilisateur {
+  display: grid;
   grid-column: 1/7;
+  gap: 80px;
 }
 
 .name {
@@ -83,5 +96,45 @@ input::placeholder {
   font-style: normal;
   font-weight: 300;
   line-height: normal;
+}
+
+.photo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.photoPreview {
+  width: 183px;
+  height: 260px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.chatButton {
+  width: 237px;
+  color: #2B2B2B;
+  text-align: center;
+  font-family: "Lexend Tera", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  padding: 30px 23px;
+  border-radius: 8px;
+  border: none;
+  background: #808080;
+  cursor: not-allowed;
+  transition: background 0.3s ease;
+}
+
+/* Style du bouton quand le formulaire est valide */
+.chatButton.active {
+  background: #7ED956;
+  cursor: pointer;
+}
+
+.chatButton:disabled {
+  opacity: 0.5;
 }
 </style>
