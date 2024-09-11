@@ -55,17 +55,21 @@ const isFormValid = computed(() => {
         Accéder au chat
       </button>
     </div>
+    <div class="regles">
+      <h2 class="h2">Règles du chat</h2>
+    </div>
   </section>
 </template>
 
 <style scoped>
 .wrapper {
+  margin-top: 50px;
   margin-bottom: 180px;
 }
 
 .utilisateur {
   display: grid;
-  grid-column: 1/7;
+  grid-column: 1/5;
   gap: 80px;
 }
 
@@ -73,6 +77,10 @@ const isFormValid = computed(() => {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.name, .photo input {
+  border-bottom: 1px solid #2b2b2b;
 }
 
 label {
@@ -87,6 +95,12 @@ label {
 input {
   background: none;
   border: none;
+  color: #2B2B2B;
+  font-family: "Lexend Tera", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
 }
 
 input::placeholder {
@@ -102,6 +116,12 @@ input::placeholder {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.photo-preview {
+  display: flex;
+  align-items: end;
+  justify-content: end;
 }
 
 .photoPreview {
@@ -120,7 +140,7 @@ input::placeholder {
   font-style: normal;
   font-weight: 300;
   line-height: normal;
-  padding: 30px 23px;
+  padding: 20px;
   border-radius: 8px;
   border: none;
   background: #808080;
@@ -128,7 +148,6 @@ input::placeholder {
   transition: background 0.3s ease;
 }
 
-/* Style du bouton quand le formulaire est valide */
 .chatButton.active {
   background: #7ED956;
   cursor: pointer;
@@ -136,5 +155,10 @@ input::placeholder {
 
 .chatButton:disabled {
   opacity: 0.5;
+}
+
+.regles {
+  grid-column: 7/13;
+  display: grid;
 }
 </style>
