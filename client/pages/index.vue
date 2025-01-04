@@ -6,6 +6,7 @@ import MojitoDuMois from "~/components/homePage/MojitoDuMois.vue";
 import ApercuCarteBoissonNourriture from "~/components/homePage/ApercuCarteBoissonNourriture.vue";
 import ReseauxSociauxHoraires from "~/components/homePage/ReseauxSociauxHoraires.vue";
 import ContactChatRedirection from "~/components/homePage/ContactChatRedirection.vue";
+import Gallery from "~/components/LeBarPage/Gallery.vue";
 
 useHead({
   title: 'TitoMojito - Bar à mojitos'
@@ -18,7 +19,9 @@ useHead({
   <MojitoDuMois />
   <ApercuCarteBoissonNourriture />
   <ReseauxSociauxHoraires />
-  <ContactChatRedirection />
+  <ClientOnly>
+    <Gallery />
+  </ClientOnly>
 </template>
 
 <style scoped>

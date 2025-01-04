@@ -175,13 +175,13 @@ onUnmounted(() => {
 .container {
   margin-top: 130px;
   border-radius: 10px;
-  background: var(--color-primary);
+  background: var(--color-secondary);
   padding-top: 30px;
   padding-bottom: 300px;
 }
 .h2 {
   grid-column: 1/13;
-  color: var(--color-secondary);
+  color: var(--color-primary);
   font-size: clamp(35px , 8vw , 80px);
   font-style: normal;
   font-weight: 400;
