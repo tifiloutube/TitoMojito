@@ -90,7 +90,7 @@ onUnmounted(() => {
 }
 
 .h2 {
-  color: #F1ECE8;
+  color: var(--color-primary);
   font-size: clamp(20px, 4vw, 45px);
 }
 .button {
@@ -98,7 +98,7 @@ onUnmounted(() => {
 }
 
 .containerEnd {
-  background: #7ED956;
+  background: var(--tertiary-color);
   height: 100vh;
   width: 100vw;
   display: flex;

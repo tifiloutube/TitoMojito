@@ -26,7 +26,7 @@
 .h2 {
   grid-column: 1/13;
   text-align: center;
-  color: #2B2B2B;
+  color: var(--color-primary);
   font-size: clamp(30px, 8vw, 80px);
   font-style: normal;
   font-weight: 400;
@@ -59,7 +59,7 @@ video {
 }
 p {
   width: 720px;
-  color: #F1ECE8;
+  color: var(--color-primary);
   text-align: center;
   font-family: "Lexend Tera", sans-serif;
   font-size: 25px;
@@ -68,7 +68,7 @@ p {
   line-height: normal;
 }
 span {
-  color: #7ED956;
+  color: var(--tertiary-color);
   font-family: "Bradley Hand", sans-serif;
   font-size: 35px;
 }

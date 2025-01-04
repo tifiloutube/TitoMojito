@@ -10,14 +10,20 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@prisma/client": "^6.1.0",
+    "@studio-freight/lenis": "^1.0.42",
     "gsap": "^3.12.5",
     "nuxt": "^3.10.3",
     "nuxt-swiper": "^1.2.2",
+    "prisma": "^6.1.0",
     "swiper": "^11.0.7",
     "vue": "^3.4.19",
-    "vue-router": "^4.3.0"
+    "vue-router": "^4.3.0",
+    "ws": "^8.18.0"
   },
   "devDependencies": {
-    "jest": "^29.7.0"
+    "@types/ws": "^8.5.13",
+    "jest": "^29.7.0",
+    "ts-node": "^10.9.2"
   }
 }

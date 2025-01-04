@@ -63,6 +63,6 @@ onMounted(() => {
 .h1 {
   position: absolute;
   text-align: center;
-  color: #F1ECE8;
+  color: var(--color-primary);
 }
 </style>

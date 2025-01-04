@@ -54,14 +54,19 @@ nav {
   position: fixed;
   top: 10px;
   right: 10px;
-  background: #f9f6ed;
+  background: var(--color-primary);
   border-radius: 5px;
-  border: 1px dashed #2b2b2b;
+  border: 1px dashed var(--color-secondary);
   width: 140px;  /* Taille initiale */
   height: 45px; /* Taille initiale */
   transition: width 0.5s ease, height 0.5s ease; /* Transitions synchronisées sans délai */
   overflow: hidden; /* Cache les débordements pendant l'animation */
   z-index: 1000;
+  li {
+    a {
+      color: var(--color-secondary);
+    }
+  }
 }
 
 .open {
@@ -73,6 +78,7 @@ p {
   text-align: center; /* Texte centré par défaut */
   padding: 10px 30px;
   cursor: pointer; /* Style pour indiquer que l'élément est cliquable */
+  color: var(--color-secondary);
   transition: color 0.3s ease, text-align 0.3s ease; /* Transition pour la couleur du texte et l'alignement */
 }
 
@@ -93,11 +99,11 @@ ul li {
 }
 
 li a:hover {
-  color: #7ed956; /* Couleur de fond lors du survol */
+  color: #7ed956 !important; /* Couleur de fond lors du survol */
 }
 
 .active-link a {
-  color: #7ed956; /* Couleur pour l'élément actif */
+  color: #7ed956 !important; /* Couleur pour l'élément actif */
 }
 
 @media screen and (max-width: 900px) {

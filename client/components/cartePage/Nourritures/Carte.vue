@@ -245,7 +245,7 @@ li {
   animation: slideDown 0.5s ease forwards;
 }
 .composition {
-  color: #2B2B2B;
+  color: var(--color-primary);
   font-family: "Lexend Tera", sans-serif;
   font-size: 15px !important;
   font-style: normal;

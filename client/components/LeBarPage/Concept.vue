@@ -39,7 +39,7 @@ onMounted(async () => {
   margin-top: 50px;
 }
 .h2 {
-  color: #2B2B2B;
+  color: var(--color-primary);
   font-size: clamp(35px , 8vw , 80px);
   font-style: normal;
   font-weight: 400;

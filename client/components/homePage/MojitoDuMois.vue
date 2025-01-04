@@ -40,7 +40,7 @@ onMounted(
 <template>
   <section class="container">
     <article class="mojitoDuMois">
-      <div v-for="(mojito, index) in mojitosDuMois" :key="index" class="saveurMojito" :style="{ backgroundImage: `url(${mojito.imageBackground})`, background: `linear-gradient(180deg, #F9F6ED 0%, ${mojito.couleurGradient} 33%, ${mojito.couleurGradient} 100%)` }">
+      <div v-for="(mojito, index) in mojitosDuMois" :key="index" class="saveurMojito" :style="{ backgroundImage: `url(${mojito.imageBackground})`, background: `linear-gradient(180deg, var(--color-secondary) 0%, ${mojito.couleurGradient} 33%, ${mojito.couleurGradient} 100%)` }">
         <div class="info">
           <h2 class="h2">{{ mojito.lieu }}</h2>
           <h3 class="localisation">La saveurs du mois</h3>
@@ -81,7 +81,7 @@ onMounted(
 
 .h2 {
   text-align: center;
-  color: #2B2B2B;
+  color: var(--color-primary);
   font-size: clamp(30px, 10vw, 80px);
   font-style: normal;
   font-weight: 400;
@@ -103,7 +103,7 @@ onMounted(
   --webkit-background-clip: text;
 }
 .localisation {
-  color: #2b2b2b;
+  color: var(--color-primary);
   text-align: center;
   font-size: clamp(20px, 3vw, 35px);
   font-style: normal;

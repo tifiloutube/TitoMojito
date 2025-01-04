@@ -58,7 +58,7 @@ onMounted(() => {
   text-shadow: 0px 4px 50px var(--tertiary-color);
 }
 .container {
-  background-color: #2b2b2b;
+  background-color: var(--color-primary);
   border-radius: 0 0 10px 10px;
 }
 .containerTitle {
@@ -77,7 +77,7 @@ onMounted(() => {
 .h1 {
   position: absolute;
   text-align: center;
-  color: #F1ECE8;
+  color: var(--color-primary);
 }
 aside {
   display: flex;
@@ -93,7 +93,7 @@ aside {
   flex-direction: column;
 }
 .info p:nth-child(1) {
-  color: #f9f6ed;
+  color: var(--color-secondary);
   font-family: "Bradley Hand", sans-serif;
   font-size: 50px;
   font-style: normal;
@@ -102,7 +102,7 @@ aside {
 }
 
 .info p:nth-child(2) {
-  color: #f9f6ed;
+  color: var(--color-secondary);
   font-family: "Bradley Hand", sans-serif;
   font-size: 45px;
   font-style: normal;
@@ -112,7 +112,7 @@ aside {
 }
 
 .info p:nth-child(3) {
-  color: #f9f6ed;
+  color: var(--color-secondary);
   font-family: "Bradley Hand", sans-serif;
   font-size: 15px;
   font-style: normal;
@@ -136,7 +136,7 @@ aside {
     font-size: 20px !important;
   }
   .mojito p:nth-child(3) {
-    color: #f9f6ed;
+    color: var(--color-primary);
     font-family: "Bradley Hand", sans-serif;
     font-size: 13px !important;
     font-style: normal;

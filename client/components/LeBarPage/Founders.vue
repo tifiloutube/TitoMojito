@@ -53,7 +53,7 @@ onMounted(
 }
 .h2 {
   grid-column: 1 / 13;
-  color: #2B2B2B;
+  color: var(--color-primary);
   font-size: clamp(35px , 8vw , 80px);
   font-style: normal;
   font-weight: 400;
@@ -68,9 +68,9 @@ onMounted(
   top: 0;
 }
 .card-body {
-  border-top: 1px solid #2B2B2B;
+  border-top: 1px solid var(--color-primary);
   padding-top: 30px;
-  background-color: #F9F6ED;
+  background-color: var(--color-secondary);
   transition: all 0.5s;
 }
 .cards {

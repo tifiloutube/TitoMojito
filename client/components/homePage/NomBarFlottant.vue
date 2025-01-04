@@ -386,7 +386,7 @@ onMounted(() => {
 .title {
   position: absolute;
   z-index: 10;
-  color: white;
+  color: var(--color-primary);
   text-align: center;
   opacity: 0;
   width: 80vw;

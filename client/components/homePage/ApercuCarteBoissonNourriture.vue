@@ -71,7 +71,7 @@ onMounted(() => {
   margin-top: 50px;
   grid-column: 1/13;
   text-align: center;
-  color: #2B2B2B;
+  color: var(--color-primary);
   font-size: clamp(35px, 8vw, 80px);
   font-style: normal;
   font-weight: 400;
@@ -98,7 +98,7 @@ img {
 }
 
 .container:hover .container-name {
-  box-shadow: 5px 4px 0px 0px #7ED956;
+  box-shadow: 5px 4px 0px 0px var(--tertiary-color);
   transform: translate(-4px, -4px);
 }
 

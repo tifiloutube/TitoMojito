@@ -9,9 +9,12 @@ export default defineNuxtConfig({
   },
   devtools: { enabled: true },
   css: ['~/assets/css/global.css'],
+  plugins: [
+    { src: '~/plugins/lenis.js', mode: 'client' },
+  ],
   runtimeConfig: {
     public: {
       apiUrl: process.env.API_URL,
     }
-  }
+  },
 });

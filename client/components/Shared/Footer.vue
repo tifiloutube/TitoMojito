@@ -94,7 +94,7 @@
 
 footer {
   margin-top: -90px;
-  color: #2B2B2B;
+  color: var(--color-primary);
   font-family: "Lexend Tera", sans-serif;
   font-size: 25px;
   font-style: normal;
@@ -105,6 +105,7 @@ footer {
     font-weight: 400;
   }
   a {
+    color: var(--color-primary) !important;
     font-size: 18px;
     font-weight: 400;
   }
@@ -116,17 +117,17 @@ footer {
 }
 .topContainer p:nth-child(1) {
   display: grid;
-  grid-column-start: 1;
+  grid-column-start: 3;
   grid-column-end: 4;
 }
 .topContainer p:nth-child(2) {
   display: grid;
   grid-column-start: 5;
-  grid-column-end: 9;
+  grid-column-end: 7;
 }
 .topContainer p:nth-child(3) {
   display: grid;
-  grid-column-start: 9;
+  grid-column-start: 8;
   grid-column-end: 13;
 }
 span {
@@ -134,7 +135,7 @@ span {
   margin-bottom: 20px;
   display: block;
   width: 100vw;
-  border: 1px solid #2B2B2B;
+  border: 1px solid var(--color-primary);
 }
 
 li {
@@ -143,7 +144,7 @@ li {
 
 .menu {
   display: grid;
-  grid-column-start: 1;
+  grid-column-start: 3;
   grid-column-end: 4;
   gap: 30px;
 }
@@ -152,14 +153,14 @@ li {
   flex-direction: column;
   gap: 30px;
   grid-column-start: 5;
-  grid-column-end: 9;
+  grid-column-end: 7;
 }
 .contact {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  grid-column-start: 9;
-  grid-column-end: 13;
+  grid-column-start: 7;
+  grid-column-end: 11;
 }
 
 .copyright {
@@ -167,7 +168,7 @@ li {
   margin-bottom: 125px;
   width: 100vw;
   text-align: center;
-  color: #2B2B2B;
+  color: var(--color-primary);
   font-family: "Lexend Tera", sans-serif;
   font-size: 10px !important;
   font-style: normal;
@@ -177,11 +178,11 @@ li {
 
 NuxtLink {
   text-decoration: none;
-  color: #2B2B2B;
+  color: var(--color-primary);
 }
 
 .linkdev {
-  color: #2B2B2B;
+  color: var(--color-primary);
   font-family: "Lexend Tera", sans-serif;
   font-size: 10px !important;
   font-style: normal;
@@ -192,7 +193,7 @@ NuxtLink {
 }
 
 .linkdev:hover {
-  color: #7ed956;
+  color: var(--tertiary-color);
   transition: ease 0.5s;
 }
 

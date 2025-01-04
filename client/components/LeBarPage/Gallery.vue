@@ -111,7 +111,7 @@ function handleResize() {
 const generatePaginationHtml = (current, total) => {
   let paginationHtml = '';
   for (let i = 1; i <= total; i++) {
-    const color = i === current ? '#7ED956' : 'white';
+    const color = i === current ? 'var(--tertiary-color)' : 'white';
     const fontSize = i === current ? '1.5em' : '1em';
     paginationHtml += `<span style="color: ${color}; font-size: ${fontSize};" class="pagination-dot${i === current ? ' current-slide' : ''}">.${i}</span> `;
   }
@@ -175,13 +175,13 @@ onUnmounted(() => {
 .container {
   margin-top: 130px;
   border-radius: 10px;
-  background: #2B2B2B;
+  background: var(--color-primary);
   padding-top: 30px;
   padding-bottom: 300px;
 }
 .h2 {
   grid-column: 1/13;
-  color: #F9F6ED;
+  color: var(--color-secondary);
   font-size: clamp(35px , 8vw , 80px);
   font-style: normal;
   font-weight: 400;

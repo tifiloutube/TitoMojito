@@ -66,9 +66,9 @@ onMounted(loadMemberStaff);
   top: 0;
 }
 .card-body {
-  border-top: 1px solid #2B2B2B;
+  border-top: 1px solid var(--color-primary);
   padding-top: 30px;
-  background-color: #F9F6ED;
+  background-color: var(--color-secondary);
   transition: all 0.5s;
 }
 .cards {
