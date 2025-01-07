@@ -14,9 +14,6 @@ useHead({
   <AboutHeader />
   <Concept />
   <Founders />
-  <ClientOnly>
-    <Gallery />
-  </ClientOnly>
 </template>
 
 <style scoped>
