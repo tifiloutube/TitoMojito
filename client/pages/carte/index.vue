@@ -54,7 +54,6 @@ useHead({
     <h1 class="title">On commande quoi ?</h1>
     <article class="container" v-for="carte in cartes" :key="carte.type">
       <NuxtLink :to="carte.route" style="position: relative; width: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column;">
-        <!-- Utilisation de la variable réactive pour afficher les images des cartes -->
         <img :src="carte.image" :alt="`image carte ${carte.type}`">
         <button class="container-name button">
           {{ carte.nom }}
