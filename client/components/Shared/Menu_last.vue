@@ -260,7 +260,7 @@ onUnmounted(() => {
     color: #7ed956 !important;
     transition: ease 0.2s;
   }
-  
+
   @media screen and (max-width: 900px) {
     .open-width {
       width: 80vw;
