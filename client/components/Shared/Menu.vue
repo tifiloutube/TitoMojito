@@ -101,7 +101,7 @@ onMounted(() => {
   <nav :class="['wrapper', menuClass, wrapperClass]">
     <ol :class="['cliquable', olClass]">
       <NuxtLink to="/" class="texte" @click="closeMenu">
-        <svg width="177" height="114" viewBox="0 0 889 605" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="177" height="114" class="logo" viewBox="0 0 889 605" fill="none" xmlns="http://www.w3.org/2000/svg">
           <mask id="mask0_927_500" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="146" y="419" width="574" height="187">
             <path d="M719.47 419.694H146.614V605.001H719.47V419.694Z" fill="white"/>
           </mask>
@@ -414,7 +414,7 @@ onMounted(() => {
     </ul>
     <div class="menuMobile">
       <div class="menuMobile-burger cliquable" @click="toggleMenu">
-        <svg width="50" height="50" viewBox="0 0 600 468" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="30" height="30" viewBox="0 0 600 468" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M33.3333 34H566.667M33.3333 234H566.667M33.3333 434H566.667" stroke="#7ED956" stroke-width="66.6667" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </div>
@@ -428,7 +428,6 @@ onMounted(() => {
 </template>
 
 <style scoped>
-/* Wrapper styling */
 .wrapper {
   display: flex;
   justify-content: space-between;
@@ -478,7 +477,6 @@ onMounted(() => {
   }
 }
 
-/* Par défaut */
 .cliquable {
   transform: scale(1);
   transition: transform 0.3s ease-in-out;
@@ -500,8 +498,7 @@ onMounted(() => {
   }
 
   .logo {
-    width: 161px;
-    height: 104px;
+    width: 70%;
   }
 
   .cliquable {
