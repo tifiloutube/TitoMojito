@@ -405,7 +405,6 @@ onMounted(() => {
         </NuxtLink>
       </li>
       <span class="line"></span>
-
       <li>
         <NuxtLink to="/carte" class="texte" :class="{ active: isActive('/carte') }">
           Nos cartes
@@ -420,7 +419,6 @@ onMounted(() => {
       </div>
       <ul :class="['menuMobile-navigation', activeSection, { 'open': isMenuOpen }]">
         <li><NuxtLink to="/le-bar" @click="closeMenu">Le Bar</NuxtLink></li>
-        <span class="line"></span>
         <li><NuxtLink to="/carte" @click="closeMenu">Nos Cartes</NuxtLink></li>
       </ul>
     </div>
@@ -588,10 +586,7 @@ onMounted(() => {
   }
 
   .menuMobile-navigation .line {
-    width: 0;
-    height: 0;
-    display: none;
-    transition: width 0.4s ease-in-out 0.5s; /* Line animation delay */
+    transition: width 0.4s ease-in-out 0.5s;
   }
 
   .menuMobile-navigation.open .line {
