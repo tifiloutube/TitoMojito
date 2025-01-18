@@ -20,7 +20,7 @@ async function fetchGalleryData() {
     const url = `${config.public.apiUrl}/199`
     const response = await fetch(url)
     const data = await response.json();
-    galleryPhotos.value = data.acf_fields.galerie_photo;
+    galleryPhotos.value = data.acf_fields.titomojito_equipe;
     await nextTick();
   } catch (error) {
     console.error('Erreur lors de la récupération des données de la galerie:', error);
