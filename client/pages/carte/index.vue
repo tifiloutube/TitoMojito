@@ -66,6 +66,7 @@ useHead({
 
 <style scoped>
 .wrapper {
+  margin-top: 100px;
   margin-bottom: 140px;
 }
   .wrapper .container:nth-child(2) {
