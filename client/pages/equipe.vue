@@ -2,7 +2,7 @@
 
 import EquipeHeader from "~/components/equipePage/EquipeHeader.vue";
 import Staff from "~/components/equipePage/Staff.vue";
-import ContactRecrutement from "~/components/equipePage/ContactRecrutement.vue";
+import ContactRecrutement from "~/components/LeBarPage/ContactRecrutement.vue";
 
 useHead({
   title: 'TitoMojito - Bar à mojitos'

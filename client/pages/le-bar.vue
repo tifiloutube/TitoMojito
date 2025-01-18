@@ -4,6 +4,7 @@ import AboutHeader from "~/components/LeBarPage/AboutHeader.vue";
 import Founders from "~/components/LeBarPage/Founders.vue";
 import Concept from "~/components/LeBarPage/Concept.vue";
 import Equipe from "~/components/LeBarPage/Equipe.vue";
+import ContactRecrutement from "~/components/LeBarPage/ContactRecrutement.vue";
 
 useHead({
   title: 'TitoMojito - Bar à mojitos'
@@ -15,6 +16,7 @@ useHead({
   <Concept />
   <Founders />
   <Equipe />
+  <ContactRecrutement />
 </template>
 
 <style scoped>
