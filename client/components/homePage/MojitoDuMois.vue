@@ -128,7 +128,7 @@ onMounted(
     display: none;
   }
   .info {
-    margin: auto;
+    margin-top: 30vh;
   }
 }
 </style>

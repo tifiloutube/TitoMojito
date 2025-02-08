@@ -59,6 +59,9 @@ onMounted(async () => {
   display: flex;
   flex-direction: column;
   gap: 50px;
+  p {
+    line-height: 2em;
+  }
 }
 
 @media screen and (max-width: 900px) {

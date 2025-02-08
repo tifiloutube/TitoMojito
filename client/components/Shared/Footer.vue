@@ -48,7 +48,6 @@
       <ul class="menu">
         <li><NuxtLink to="/" style="text-decoration: none; color: #2B2B2B;">Accueil</NuxtLink></li>
         <li><NuxtLink to="/le-bar" style="text-decoration: none; color: #2B2B2B;">Le bar</NuxtLink></li>
-        <li><NuxtLink to="/equipe" style="text-decoration: none; color: #2B2B2B;">L'équipe</NuxtLink></li>
         <li><NuxtLink to="/carte" style="text-decoration: none; color: #2B2B2B;">La carte</NuxtLink></li>
       </ul>
     </div>
