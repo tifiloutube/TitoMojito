@@ -58,7 +58,7 @@ onMounted(() => {
       <ul class="list-nourritures" v-for="(categorie, index) in carteNourriture" :key="index">
         <div class="list-nourritures_title" @click="toggle(index)">
           <h2 class="h2">{{ categorie.nourritures.categories_de_la_nourriture }}</h2>
-          <svg :class="{ 'is-rotated': openStates[index] }" width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg :class="{ 'is-rotated': openStates[index] }" width="40" height="40" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_1048_23)">
               <path d="M54.0001 38.935C54.0001 39.7336 53.696 40.5354 53.0827 41.1473C51.8608 42.3692 49.8833 42.3692 48.6614 41.1473L27.0003 19.4847L5.33771 41.1473C4.11578 42.3692 2.13663 42.3692 0.916447 41.1473C-0.305482 39.9253 -0.305482 37.9462 0.916447 36.7246L24.7881 12.8529C26.01 11.631 27.9891 11.631 29.2093 12.8529L53.0824 36.7246C53.6942 37.3344 54.0001 38.1347 54.0001 38.935Z" fill="#F1ECE8"/>
             </g>
