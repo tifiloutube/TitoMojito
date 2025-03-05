@@ -65,7 +65,7 @@ function handleMouseEnter(e, nourriture) {
     gsap.to(hoveredImageStyle, {
       opacity: 1,
       scale: 1,
-      duration: 0.3,
+      duration: 0.750,
       ease: 'power3.out',
     });
 
@@ -84,7 +84,7 @@ function handleMouseLeave() {
       gsap.to(hoveredImageStyle, {
         opacity: 0,
         scale: 0.5,
-        duration: 0.3,
+        duration: 0.750,
         ease: 'power3.out',
         onComplete: () => {
           console.log("💀 Image cachée après fade-out");
@@ -103,7 +103,7 @@ function moveImage(e) {
   gsap.to(hoveredImageStyle, {
     left: `${e.clientX + 20}px`,
     top: `${e.clientY - 100}px`,
-    duration: 0.1,
+    duration: 0.750,
     ease: 'power3.out',
   });
 }
