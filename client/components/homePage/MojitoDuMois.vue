@@ -89,7 +89,7 @@ onMounted(
 }
 .saveur {
   width: 100%;
-  letter-spacing: -20px;
+  letter-spacing: -0.2em;
   color: transparent;
   text-align: center;
   font-family: "Lexend Tera", sans-serif;
@@ -129,6 +129,9 @@ onMounted(
   }
   .info {
     margin-top: 30vh;
+  }
+  .saveur {
+    color: var(--color-primary);
   }
 }
 </style>
