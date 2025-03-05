@@ -130,8 +130,6 @@ onMounted(() => {
 });
 </script>
 
-
-
 <template>
   <section class="wrapper">
     <article class="left-part">
