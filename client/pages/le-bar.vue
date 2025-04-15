@@ -7,7 +7,15 @@ import Equipe from "~/components/LeBarPage/Equipe.vue";
 import ContactRecrutement from "~/components/LeBarPage/ContactRecrutement.vue";
 
 useHead({
-  title: 'TitoMojito - Bar à mojitos'
+  title: 'Le Bar | Tito Mojito',
+  meta: [
+    { name: 'description', content: 'Découvrez l’univers de Tito Mojito à Toulouse : un bar à cocktails unique, une équipe passionnée et une ambiance festive au cœur de la ville.' },
+    { property: 'og:title', content: 'Le Bar | Tito Mojito' },
+    { property: 'og:description', content: 'Un bar à cocktails unique à Toulouse. Tito Mojito, c’est une équipe passionnée et une ambiance chaleureuse.' },
+    { property: 'og:url', content: 'https://www.titomojito.fr/le-bar' },
+    { property: 'og:image', content: 'https://www.titomojito.fr/images/og-bar.jpg' }
+  ],
+  link: [{ rel: 'canonical', href: 'https://www.titomojito.fr/le-bar' }]
 })
 </script>
 

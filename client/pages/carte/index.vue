@@ -45,7 +45,15 @@ onMounted(() => {
   fetchCartes()
 })
 useHead({
-  title: 'TitoMojito - Bar à mojitos'
+  title: 'Nos cartes | Tito Mojito',
+  meta: [
+    { name: 'description', content: 'Parcourez nos cartes de cocktails et de plats : mojitos artisanaux, tapas savoureuses, et bien plus encore !' },
+    { property: 'og:title', content: 'Nos cartes | Tito Mojito' },
+    { property: 'og:description', content: 'Cocktails maison, tapas, planches… Découvrez toutes nos cartes chez Tito Mojito Toulouse.' },
+    { property: 'og:url', content: 'https://titomojito.fr/carte' },
+    { property: 'og:image', content: 'https://titomojito.fr/images/og-cartes.jpg' }
+  ],
+  link: [{ rel: 'canonical', href: 'https://titomojito.fr/carte' }]
 })
 </script>
 
