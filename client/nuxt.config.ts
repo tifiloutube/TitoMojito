@@ -17,9 +17,4 @@ export default defineNuxtConfig({
       apiUrl: process.env.API_URL,
     }
   },
-  sitemap: {
-    siteUrl: 'https://titomojito.fr',
-    gzip: true,
-    trailingSlash: false
-  }
 });
