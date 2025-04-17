@@ -23,7 +23,9 @@ useHead({
   <AboutHeader />
   <Concept />
   <Founders />
-  <Equipe />
+  <ClientOnly>
+    <Equipe />
+  </ClientOnly>
   <ContactRecrutement />
 </template>
 
