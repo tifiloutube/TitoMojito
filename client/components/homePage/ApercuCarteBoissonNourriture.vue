@@ -21,13 +21,13 @@ const fetchCartes = async () => {
           type: 'nourriture',
           nom: 'On grignote quoi ?',
           image: data.acf_fields.images_cartes.image_carte_tapas.url,
-          route: '/carte/nourriture'
+          route: '/cartes/nourriture'
         },
         {
           type: 'boissons',
           nom: 'On mojite quoi ?',
           image: data.acf_fields.images_cartes.image_carte_boissons.url,
-          route: '/carte/boissons'
+          route: '/cartes/boissons'
         }
       ]
     }
