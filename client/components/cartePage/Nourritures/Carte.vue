@@ -43,8 +43,8 @@ function handleResize() {
 }
 
 function handleMouseEnter(e, nourriture) {
-  console.log(`👉 Mouse Enter sur: ${nourriture.nom_de_la_nourriture}`);
-  console.log("❌ Annulation du timeout de disparition");
+  //console.log(`👉 Mouse Enter sur: ${nourriture.nom_de_la_nourriture}`);
+  //console.log("❌ Annulation du timeout de disparition");
 
   mouseInside = true;
   clearTimeout(hideTimeout); // Annule le `mouseleave` en attente
@@ -53,7 +53,7 @@ function handleMouseEnter(e, nourriture) {
   hoveredImage.value = nourriture.photo_de_la_nourriture.url;
 
   nextTick(() => {
-    console.log("✅ Affichage immédiat de l'image avec set()");
+    //console.log("✅ Affichage immédiat de l'image avec set()");
     gsap.set(hoveredImageStyle, {
       left: `${e.clientX + 20}px`,
       top: `${e.clientY - 100}px`,
@@ -61,7 +61,7 @@ function handleMouseEnter(e, nourriture) {
       scale: 0.5,
     });
 
-    console.log("🎬 Animation d'apparition");
+    //console.log("🎬 Animation d'apparition");
     gsap.to(hoveredImageStyle, {
       opacity: 1,
       scale: 1,
@@ -74,25 +74,25 @@ function handleMouseEnter(e, nourriture) {
 }
 
 function handleMouseLeave() {
-  console.log("👋 Mouse Leave détecté !");
+  //console.log("👋 Mouse Leave détecté !");
   mouseInside = false;
 
   // On attend un court instant avant de cacher l'image, pour éviter le flickering
   hideTimeout = setTimeout(() => {
     if (!mouseInside) {
-      console.log("🔥 Disparition de l'image (animation de fade-out)");
+      //console.log("🔥 Disparition de l'image (animation de fade-out)");
       gsap.to(hoveredImageStyle, {
         opacity: 0,
         scale: 0.5,
         duration: 0.750,
         ease: 'power3.out',
         onComplete: () => {
-          console.log("💀 Image cachée après fade-out");
+          //console.log("💀 Image cachée après fade-out");
           hoveredImage.value = null;
         },
       });
     } else {
-      console.log("🚫 Mouse Leave annulé, car la souris est toujours sur un élément !");
+      //console.log("🚫 Mouse Leave annulé, car la souris est toujours sur un élément !");
     }
   }, 50); // Petit délai pour éviter les disparitions instantanées
 }
