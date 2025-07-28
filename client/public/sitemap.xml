@@ -3,32 +3,35 @@
 
     <url>
         <loc>https://titomojito.fr/</loc>
-        <changefreq>weekly</changefreq>
+        <lastmod>2025-07-28</lastmod>
+        <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
         <loc>https://titomojito.fr/le-bar</loc>
+        <lastmod>2025-07-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <url>
-        <loc>https://titomojito.fr/les-cartes</loc>
-        <changefreq>monthly</changefreq>
+        <loc>https://titomojito.fr/cartes</loc>
+        <lastmod>2025-07-15</lastmod>
+        <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://titomojito.fr/carte/boissons</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <loc>https://titomojito.fr/cartes/boissons</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://titomojito.fr/carte/nourriture</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <loc>https://titomojito.fr/cartes/nourriture</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
     </url>
 
 </urlset>

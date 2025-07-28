@@ -14,7 +14,7 @@
       <ul class="menu">
         <li><NuxtLink to="/" style="text-decoration: none; color: #2B2B2B;">Accueil</NuxtLink></li>
         <li><NuxtLink to="/le-bar" style="text-decoration: none; color: #2B2B2B;">Le bar</NuxtLink></li>
-        <li><NuxtLink to="/carte" style="text-decoration: none; color: #2B2B2B;">La carte</NuxtLink></li>
+        <li><NuxtLink to="/cartes" style="text-decoration: none; color: #2B2B2B;">La carte</NuxtLink></li>
       </ul>
       <ul class="socialNetwork">
         <li>
@@ -48,7 +48,7 @@
       <ul class="menu">
         <li><NuxtLink to="/" style="text-decoration: none; color: #2B2B2B;">Accueil</NuxtLink></li>
         <li><NuxtLink to="/le-bar" style="text-decoration: none; color: #2B2B2B;">Le bar</NuxtLink></li>
-        <li><NuxtLink to="/carte" style="text-decoration: none; color: #2B2B2B;">La carte</NuxtLink></li>
+        <li><NuxtLink to="/cartes" style="text-decoration: none; color: #2B2B2B;">La carte</NuxtLink></li>
       </ul>
     </div>
     <div>

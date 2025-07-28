@@ -406,7 +406,7 @@ onMounted(() => {
       </li>
       <span class="line"></span>
       <li>
-        <NuxtLink to="/carte" class="texte" :class="{ active: isActive('/carte') }">
+        <NuxtLink to="/cartes" class="texte" :class="{ active: isActive('/cartes') }">
           Nos cartes
         </NuxtLink>
       </li>
@@ -419,7 +419,7 @@ onMounted(() => {
       </div>
       <ul :class="['menuMobile-navigation', activeSection, { 'open': isMenuOpen }]">
         <li><NuxtLink to="/le-bar" @click="closeMenu">Le Bar</NuxtLink></li>
-        <li><NuxtLink to="/carte" @click="closeMenu">Nos Cartes</NuxtLink></li>
+        <li><NuxtLink to="/cartes" @click="closeMenu">Nos Cartes</NuxtLink></li>
       </ul>
     </div>
   </nav>
