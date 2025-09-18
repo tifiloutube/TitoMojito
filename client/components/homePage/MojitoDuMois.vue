@@ -116,18 +116,18 @@ onMounted(loadMojitosDuMois)
 .imageContainer {
   position: absolute;
   z-index: 1;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: end;
 }
 
 .imageContainer img {
   height: 100%;
-  width: 50%;
+  width: 100%;
   max-width: 700px;
   object-fit: cover;
 }
@@ -183,7 +183,10 @@ onMounted(loadMojitosDuMois)
     display: none;
   }
   .info {
-    margin-top: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   .saveur {
     color: var(--color-primary);
