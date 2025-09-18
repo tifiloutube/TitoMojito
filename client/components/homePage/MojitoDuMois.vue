@@ -2,51 +2,70 @@
 import { onMounted, ref } from 'vue'
 import { useRuntimeConfig } from '#imports'
 
-const mojitosDuMois = ref([])
+const mojitosDuMois = ref<any[]>([])
 
 async function loadMojitosDuMois() {
   try {
     const config = useRuntimeConfig()
-    const url = `${config.public.apiUrl}/118`;
+    const url = `${config.public.apiUrl}/118`
 
-    const response = await fetch(url);
+    const response = await fetch(url)
     if (!response.ok) {
-      throw new Error('Erreur lors de la récupération des données');
+      throw new Error('Erreur lors de la récupération des données')
     }
 
-    const data = await response.json();
+    const data = await response.json()
 
-    if(data.acf_fields && data.acf_fields.mojitos_du_mois) {
-      mojitosDuMois.value = data.acf_fields.mojitos_du_mois.map(mojito => {
+    if (data.acf_fields && data.acf_fields.mojitos_du_mois) {
+      mojitosDuMois.value = data.acf_fields.mojitos_du_mois.map((mojito: any) => {
         return {
           saveur: mojito.mojito_du_mois.saveur_du_mois,
-          imageBackground: mojito.mojito_du_mois.image_background_saveur_du_mois.url,
+          imageBackground: mojito.mojito_du_mois.image_background_saveur_du_mois?.url || null,
           couleurGradient: mojito.mojito_du_mois.couleur_du_mojito_du_mois_pour_le_degrade,
-          imageMojito: mojito.mojito_du_mois.image_du_mojito_du_mois.url,
-          lieu: mojito.mojito_du_mois.etablissement
-        };
-      });
+          imageMojito: mojito.mojito_du_mois.image_du_mojito_du_mois?.url || null,
+          lieu: mojito.mojito_du_mois.etablissement,
+        }
+      })
     }
   } catch (error) {
-    console.error("Erreur lors de la requête fetch:", error);
+    console.error('Erreur lors de la requête fetch:', error)
   }
 }
 
-onMounted(
-    loadMojitosDuMois
-);
+onMounted(loadMojitosDuMois)
 </script>
 
 <template>
   <section class="container">
     <article class="mojitoDuMois">
-      <div v-for="(mojito, index) in mojitosDuMois" :key="index" class="saveurMojito" :style="{ backgroundImage: `url(${mojito.imageBackground})`, background: `linear-gradient(180deg, var(--color-secondary) 0%, ${mojito.couleurGradient} 33%, ${mojito.couleurGradient} 100%)` }">
+      <div
+          v-for="(mojito, index) in mojitosDuMois"
+          :key="index"
+          class="saveurMojito"
+          :style="{
+          backgroundImage: mojito.imageBackground ? `url(${mojito.imageBackground})` : 'none',
+          background: `linear-gradient(180deg, var(--color-secondary) 0%, ${mojito.couleurGradient} 33%, ${mojito.couleurGradient} 100%)`,
+        }"
+      >
         <div class="info">
           <h2 class="h2">{{ mojito.lieu }}</h2>
           <h3 class="localisation">La saveurs du mois</h3>
-          <h2 class="saveur" :style="{ backgroundImage: `url(${mojito.imageBackground})` }">{{ mojito.saveur }}</h2>
+          <h2
+              class="saveur"
+              v-if="mojito.imageBackground"
+              :style="{ backgroundImage: `url(${mojito.imageBackground})` }"
+          >
+            {{ mojito.saveur }}
+          </h2>
+          <h2 v-else class="saveur">{{ mojito.saveur }}</h2>
         </div>
-        <img :src="mojito.imageMojito" alt="Image de Mojito">
+
+        <!-- ✅ Afficher seulement si une image est dispo -->
+        <img
+            v-if="mojito.imageMojito"
+            :src="mojito.imageMojito"
+            alt="Image de Mojito"
+        />
       </div>
     </article>
   </section>
@@ -132,6 +151,16 @@ onMounted(
   }
   .saveur {
     color: var(--color-primary);
+  }
+}
+
+@media screen and (max-height: 900px) {
+  .mojitoDuMois {
+    .saveurMojito {
+      img {
+        max-width: 300px;
+      }
+    }
   }
 }
 </style>
