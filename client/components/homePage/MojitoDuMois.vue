@@ -47,9 +47,10 @@ onMounted(loadMojitosDuMois)
           background: `linear-gradient(180deg, var(--color-secondary) 0%, ${mojito.couleurGradient} 33%, ${mojito.couleurGradient} 100%)`,
         }"
       >
-        <div class="info">
+        <!-- ✅ classe conditionnelle -->
+        <div class="info" :class="{ noImage: !mojito.imageMojito }">
           <h2 class="h2">{{ mojito.lieu }}</h2>
-          <h3 class="localisation">La saveurs du mois</h3>
+          <h3 class="localisation" v-if="mojito.imageMojito">La saveurs du mois</h3>
           <h2
               class="saveur"
               v-if="mojito.imageBackground"
@@ -60,12 +61,12 @@ onMounted(loadMojitosDuMois)
           <h2 v-else class="saveur">{{ mojito.saveur }}</h2>
         </div>
 
-        <!-- ✅ Afficher seulement si une image est dispo -->
-        <img
-            v-if="mojito.imageMojito"
-            :src="mojito.imageMojito"
-            alt="Image de Mojito"
-        />
+        <div class="imageContainer" v-if="mojito.imageMojito">
+          <img
+              :src="mojito.imageMojito"
+              alt="Image de Mojito"
+          />
+        </div>
       </div>
     </article>
   </section>
@@ -76,26 +77,59 @@ onMounted(loadMojitosDuMois)
   margin-top: 80px;
   gap: 60px;
 }
+
 .mojitoDuMois {
   display: flex;
   flex-direction: column;
   gap: 100vh;
-  .saveurMojito {
-    padding-top: 20px;
-    border-radius: 20px 20px 0px 0px;
-    position: sticky;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    max-height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-  }
-  img {
-    max-width: 500px;
-  }
+}
+
+.saveurMojito {
+  padding-top: 20px;
+  border-radius: 20px 20px 0px 0px;
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.info {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+/* ✅ appliqué si pas d'image */
+.info.noImage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageContainer {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageContainer img {
+  height: 100%;
+  width: 50%;
+  max-width: 700px;
+  object-fit: cover;
 }
 
 .h2 {
@@ -106,6 +140,7 @@ onMounted(loadMojitosDuMois)
   font-weight: 400;
   line-height: normal;
 }
+
 .saveur {
   width: 100%;
   letter-spacing: -0.2em;
@@ -119,8 +154,9 @@ onMounted(loadMojitosDuMois)
   background-size: cover;
   background-position: center;
   background-clip: text;
-  --webkit-background-clip: text;
+  -webkit-background-clip: text;
 }
+
 .localisation {
   color: var(--color-primary);
   text-align: center;
@@ -130,7 +166,7 @@ onMounted(loadMojitosDuMois)
   line-height: normal;
 }
 
-@media  screen and (max-width: 900px) {
+@media screen and (max-width: 900px) {
   .saveur {
     margin-bottom: -50px;
   }
@@ -142,7 +178,7 @@ onMounted(loadMojitosDuMois)
   }
 }
 
-@media  screen and (max-width: 500px) {
+@media screen and (max-width: 500px) {
   img {
     display: none;
   }
@@ -151,16 +187,6 @@ onMounted(loadMojitosDuMois)
   }
   .saveur {
     color: var(--color-primary);
-  }
-}
-
-@media screen and (max-height: 900px) {
-  .mojitoDuMois {
-    .saveurMojito {
-      img {
-        max-width: 300px;
-      }
-    }
   }
 }
 </style>
