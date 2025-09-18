@@ -493,6 +493,7 @@ onMounted(() => {
 @media screen and (max-width: 900px) {
   svg {
     z-index: 9999;
+    cursor: pointer;
   }
 
   .logo {
