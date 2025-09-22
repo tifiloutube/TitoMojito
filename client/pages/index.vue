@@ -21,15 +21,15 @@ useHead({
     { property: 'og:locale', content: 'fr_FR' },
     { property: 'og:title', content: 'Tito Mojito | Bar à cocktails à Toulouse' },
     { property: 'og:description', content: 'Mojitos artisanaux et ambiance unique au cœur de Toulouse.' },
-    { property: 'og:image', content: 'https://www.titomojito.fr/images/og-image.jpg' },
-    { property: 'og:url', content: 'https://www.titomojito.fr' },
+    { property: 'og:image', content: 'https://titomojito.fr/images/og-image.jpg' },
+    { property: 'og:url', content: 'https://titomojito.fr' },
     { name: 'twitter:card', content: 'summary_large_image' },
     { name: 'twitter:title', content: 'Tito Mojito | Bar à cocktails à Toulouse' },
     { name: 'twitter:description', content: 'Mojitos artisanaux et ambiance unique au cœur de Toulouse.' },
-    { name: 'twitter:image', content: 'https://www.titomojito.fr/images/og-image.jpg' }
+    { name: 'twitter:image', content: 'https://titomojito.fr/images/og-image.jpg' }
   ],
   link: [
-    { rel: 'canonical', href: 'https://www.titomojito.fr' }
+    { rel: 'canonical', href: 'https://titomojito.fr' }
   ]
 })
 </script>
