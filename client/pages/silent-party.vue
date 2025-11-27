@@ -40,7 +40,9 @@ onMounted(() => {
   <SilentConcept />
   <SilentWorking />
   <FAQ />
-  <GallerySilent />
+  <ClientOnly>
+    <GallerySilent />
+  </ClientOnly>
   <ProchaineDate />
 </template>
 
