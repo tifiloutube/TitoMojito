@@ -22,7 +22,7 @@ const rightCol = faq.filter((_, i) => i % 2 === 1)
 <template>
   <section class="wrapper">
     <div class="container">
-      <h3 class="h3 title">FAQ</h3>
+      <h3 class="h3 title">Vous avez des questions ?</h3>
 
       <div class="faq-columns">
 
@@ -108,10 +108,6 @@ const rightCol = faq.filter((_, i) => i % 2 === 1)
     display: flex;
     flex-direction: column;
     gap: 40px;
-
-    .title {
-      text-align: center;
-    }
 
     .faq-columns {
       display: flex;
