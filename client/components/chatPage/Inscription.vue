@@ -120,7 +120,7 @@ input::placeholder {
 
 .photo-preview {
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   justify-content: end;
 }
 

@@ -45,8 +45,8 @@ onUnmounted(() => {
 <template>
   <section class="container" :style="{ clipPath: clipPathValue }">
     <article class="containerEnd">
-      <h2 class="h2">ENVIE DE NOUS REJOINDRE ?</h2>
-      <a href="mailto:info@titomojito.fr?subject=Candidature">Candidatez</a>
+      <h2 class="h2">Notre prochaine silent :<br>
+      18.11.25</h2>
     </article>
   </section>
 </template>

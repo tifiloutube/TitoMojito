@@ -102,6 +102,16 @@ body {
     line-height: normal;
 }
 
+.h2Black {
+    color: var(--color-secondary);
+    font-family: "Lexend Tera", sans-serif;
+    font-size: clamp(25px, 6vw, 55px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
+
 .h3 {
     color: var(--color-primary);
     font-family: "Lexend Tera", sans-serif;
